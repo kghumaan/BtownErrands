@@ -19,24 +19,3 @@
       }
     }
   });//end of keypress function
-  // Retrieve information from our database to update the to-do list.
-  databaseLink.limitToLast(100).on('child_added', function (snapshot) {
-    //GET DATA
-    var data = snapshot.val();
-      //If there was no inputted name, return Random 196 student, else return the name that was typed.
-      if (data.name == ""){
-        var name = "Random 196 student: ";
-      }else{
-        var name = data.name + ": ";
-      }
-      var activity = data.text;
-      //Convert the data we received from our database into tagged HTML objects.
-      var messageElement = $("<p>"); //p = new paragraph
-      var nameElement = $("<strong class='example-chat-name'></strong>");
-      nameElement.text(name);
-      messageElement.text(activity).prepend(nameElement);
-      //Update HTML with entries from the database.
-      messageList.append(messageElement);
-      //SCROLL TO BOTTOM OF MESSAGE LIST
-      messageList[0].scrollTop = messageList[0].scrollHeight;
-  });
