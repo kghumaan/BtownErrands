@@ -2,6 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
+<!-- FireBase Connection -->
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCdqgGdZH8bWSMiHEM7ZoeWSNfZ04uA3Y8",
+    authDomain: "errandboi-f1cf5.firebaseapp.com",
+    databaseURL: "https://errandboi-f1cf5.firebaseio.com",
+    storageBucket: "",
+  };
+  firebase.initializeApp(config);
+</script>
+
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link href="style.css" rel="stylesheet" />
 <title>ErrandBoi!</title>
@@ -23,8 +36,8 @@
 <fieldset>
 <legend><span class="number">1</span> Your Information</legend>
 <input type="text" name="field1" placeholder="Your Name *">
-<input type="email" name="field2" placeholder="Your Email *">
-<input type="email" name="field2" placeholder="Your Location* (i.e. McNutt, Hodge Hall, exact address, etc.)">
+<input type="email" name="field2" placeholder="Contact Information (Email, Phone Number, etc.) *">
+<input type="location" name="field2" placeholder="Your Location* (i.e. McNutt, Hodge Hall, exact address, etc.)">
 <textarea name="field3" placeholder="Miscellaneous Information That May Be Important"></textarea>
 <label for="job">Urgency:</label>
 <select id="job" name="field4">
