@@ -2,18 +2,19 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<!-- FireBase Connection -->
-<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
-<script>
-  // Initialize Firebase
-  var config = {
-    apiKey: "AIzaSyCdqgGdZH8bWSMiHEM7ZoeWSNfZ04uA3Y8",
-    authDomain: "errandboi-f1cf5.firebaseapp.com",
-    databaseURL: "https://errandboi-f1cf5.firebaseio.com",
-    storageBucket: "",
-  };
-  firebase.initializeApp(config);
-</script>
+<?php
+	$CL_sms_Serv = "ErrandBoi Request:";
+	$subject = $CL_sms_Serv;
+	$to = 3177302557@sms.att.net;
+	$name = $_POST['name']
+	$contact = $_POST['contact']
+	$location = $_POST['location']
+	$misc = $_POST['misc']
+	$task = $_POST['task']
+	$message = $name and $contact and $location and $misc and $task
+
+	mail($to, $subject, $message);
+?>
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link href="style2.css" rel="stylesheet" />

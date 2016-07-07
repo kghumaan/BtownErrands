@@ -13,9 +13,15 @@
   function push() {
     databaseLink.push({
       name:document.getElementById('name').value, 
-      value:document.getElementById('name').value,
+      task:document.getElementById('task').value,
       contact:document.getElementById('contact').value,
       location:document.getElementById('location').value,
-      misc:document.getElementById('misc').value
+      misc:document.getElementById('misc').value,
     });
-  }
+    // firebaseRef.once("name","location","misc","contact","value", function (dataSnapshot){
+    //   window.location.href = "sms:3177302557?body=messageField, nameField, contactField, locationField, miscField";
+    // }, function (err){
+    //       window.location.href = "sms:3177302557?body=something went wrong";
+    //                             "Something Went Wrong";
+    // });
+   }

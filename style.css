@@ -35,7 +35,7 @@ header{
 }
 #content{
 	width: 100%;
-	position: absolute;
+	position: relative;
 	top: 600px;
 	background: #FCFBE3;
 	height: 1040px;
