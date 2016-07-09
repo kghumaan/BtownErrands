@@ -11,7 +11,7 @@
   var authToken = 'bfe1503835b4966d5a78e081ea5c260c';
   //alert(messageField);
   // If the enter key is pressed, push the values in the text boxes to our database.
-  require(['twilio/lib']), function(twilio){
+  require(['twilio']), function(twilio){
     var client = twilio(accountSid, authToken);
     function push() {
       databaseLink.push({
