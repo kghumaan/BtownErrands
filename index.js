@@ -7,8 +7,8 @@
   var locationField = document.getElementById('location');
   var miscField = document.getElementById('misc');
   var messageList = $('#example-messages'); // DELETE MAYBE?????
-  var accountSid = 'AC713965b7bfb22cfd4658cb9ff997894a';
-  var authToken = 'bfe1503835b4966d5a78e081ea5c260c';
+  var twilio = require('twilio');
+  var client = new twilio.RestClient('AC713965b7bfb22cfd4658cb9ff997894a', 'bfe1503835b4966d5a78e081ea5c260c');
   //alert(messageField);
   // If the enter key is pressed, push the values in the text boxes to our database.
   require(['twilio']), function(twilio){
@@ -23,11 +23,11 @@
       });
     //require the Twilio module and create a REST client
     //Send an SMS text message
-    client.sendSms({
+    client.sms.messages.create({
 
     to:'+13177302557', // Any number Twilio can deliver to
     from: '+13173644864', // A number you bought from Twilio and can use for outbound communication
-    body: 'Requested Task' + messageField + nameField + contactField + locationField + miscField // body of the SMS message
+    body: 'Requested Task:' + messageField + nameField + contactField + locationField + miscField // body of the SMS message
     }, function(err, responseData) { //this function is executed when a response is received from Twilio
 
     if (!err) { // "err" is an error received during the request, if any
