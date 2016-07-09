@@ -23,7 +23,7 @@
       });
     //require the Twilio module and create a REST client
     //Send an SMS text message
-    client.sendMessage({
+    client.sendSms({
 
     to:'+13177302557', // Any number Twilio can deliver to
     from: '+13173644864', // A number you bought from Twilio and can use for outbound communication
