@@ -9,6 +9,11 @@
   var messageList = $('#example-messages'); // DELETE MAYBE?????
   var twilio = require('twilio');
   var client = new twilio.RestClient('AC713965b7bfb22cfd4658cb9ff997894a', 'bfe1503835b4966d5a78e081ea5c260c');
+  require.config({
+    shim: {
+      underscore: {
+        exports: '_'
+      });
   //alert(messageField);
   // If the enter key is pressed, push the values in the text boxes to our database.
   require(['twilio']), function(twilio){
