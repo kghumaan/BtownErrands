@@ -1,6 +1,12 @@
 <DOCTYPE! html>
 <html>
    <head>
+      <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+      <script type="text/javascript">
+      (function(){
+         emailjs.init("user_BsGD6b7r7YJyVoINaRylA");
+      })();
+      </script>
       <meta charset="UTF-8">
       <!--THIS IS NEEDED TO IMPORT FIREBASE LIBRARIES -->
       <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
@@ -9,7 +15,7 @@
       <!--THIS IS NEEDED TO IMPORT JQUERY LIBRARIES -->  
       <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
       <!-- THIS IS TO IMPORT MY JS FILE -->
-      <script src="index.js"></script>
+      <script data-main="index.js" src="require.js"></script>
       <link href="style.css" rel="stylesheet" />
       <title>ErrandBoi!</title>
    </head>
@@ -45,7 +51,7 @@
                      <legend><span class="number">2</span>Task that needs completion</legend>
                      <input type="text" id="task" placeholder="Let Us Know How We Can Help!*"></input>
                   </fieldset>
-                  <input type="submit" value="Apply" onClick = "push()"/>
+                  <input type="submit" value="Apply" onClick="push()"/>
                </form>
             </div>
          </div>

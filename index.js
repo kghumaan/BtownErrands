@@ -7,6 +7,7 @@
   var locationField = document.getElementById('location');
   var miscField = document.getElementById('misc');
   var messageList = $('#example-messages'); // DELETE MAYBE?????
+  
   //alert(messageField);
   // If the enter key is pressed, push the values in the text boxes to our database.
 
@@ -18,10 +19,12 @@
       location:document.getElementById('location').value,
       misc:document.getElementById('misc').value,
     });
-    // firebaseRef.once("name","location","misc","contact","value", function (dataSnapshot){
-    //   window.location.href = "sms:3177302557?body=messageField, nameField, contactField, locationField, miscField";
-    // }, function (err){
-    //       window.location.href = "sms:3177302557?body=something went wrong";
-    //                             "Something Went Wrong";
+    var TMClient = require(['textmagic-rest-client']);
+    var c = new TMClient('username', 'C7XDKZOQZo6HvhJwtUw0MBcslfqwtp4');
+    c.Messages.send({text: 'test message', phones:'3177302557'
+    });
+  }
+    // databaseLink.limitToLast(100).on('child_added', function (snapshot) {
+    // // databaseLink.once("name","location","misc","contact","value", function (dataSnapshot){
+    //   window.location.href = "sms:3177302557?body=" + messageField + nameField + contactField + locationField + miscField;
     // });
-   }
