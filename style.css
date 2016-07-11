@@ -104,7 +104,7 @@ header{
 .form-style-5 input[type="number"]:focus,
 .form-style-5 input[type="search"]:focus,
 .form-style-5 input[type="time"]:focus,
-.form-style-5 input[type="url"]:focus,
+.form-style-5 input[type="location"]:focus,
 .form-style-5 textarea:focus,
 .form-style-5 select:focus{
     background: #d2d9dd;

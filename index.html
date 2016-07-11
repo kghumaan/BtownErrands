@@ -18,7 +18,7 @@
    <body>
       <div id="container">
          <header>
-            <h1 class="title">ErrandBoi</h1>
+            <h1 class="title">Btown Errands</h1>
          </header>
          <div id="banner">
             <h2>Your Helping Hand in Every Situation</h2>
@@ -27,15 +27,15 @@
             <p class="content">Ever have an emergency while you are in class? Life has got you all tied up but your tasks won't do themselves? Well, you are at the right place for help. Let ErrandBoi take the stress off your shoulders while you can do what really matters. Simply, fill out the form below with any* task that you may need help with and one of our drivers will help you out as soon as possible!</p>
             <br><br><br><br><br><br><br><br><br>
             <div class="form-style-5">
-               <form method="POST" action="thanks.html" name="sms">
+               <form method="POST" action="thanks.html">
                   <fieldset>
                      <legend><span class="number">1</span> Your Information</legend>
                      <input type="text" name="field1" id="name" placeholder="Your Name *">
                      <input type="email" name="field2" id="contact"placeholder="Contact Information (Email, Phone Number, etc.) *">
-                     <input type="location" name="field2" id="location" placeholder="Your Location (i.e. McNutt, Hodge Hall, exact address, etc.)*">
-                     <input type="text" name="field3" id="misc" placeholder="Miscellaneous Information That May Be Important"></textarea>
+                     <input type="location" name="field3" id="location" placeholder="Your Location (i.e. McNutt, Hodge Hall, exact address, etc.)*">
+                     <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important"></textarea>
                      <label for="job">Urgency:</label>
-                     <select id="job" name="field4">
+                     <select id="job" name="field5">
                         <optgroup label="Urgency level: just for us to prioritize properly">
                            <option value="Not Urgent">Low (ETA: Up to an hour)</option>
                            <option value="reading">Normal (ETA: Up to 45 mins)</option>
@@ -45,10 +45,11 @@
                   </fieldset>
                   <fieldset>
                      <legend><span class="number">2</span>Task that needs completion</legend>
-                     <input type="text" id="task" placeholder="Let Us Know How We Can Help!*"></input>
+                     <input type="text" id="task" name="field6" placeholder="Let Us Know How We Can Help!*"></input>
                   </fieldset>
-                  <input type="submit" value="Apply" onClick="push()"/>
+                  <input name="submit" type="submit" value="Apply" onClick="push()"/>
                </form>
+               <h3><?php include "email.php" ?></h3>
             </div>
          </div>
       </div>
