@@ -3,7 +3,7 @@
    <head>
       <meta charset="UTF-8">
       <!-- Twilio Library imporrted-->
-      <script type="text/javascript" src="//media.twiliocdn.com/sdk/js/client/v1.3/twilio.min.js"></script>
+      <!-- <script type="text/javascript" src="//media.twiliocdn.com/sdk/js/client/v1.3/twilio.min.js"></script> -->
       <!--THIS IS NEEDED TO IMPORT FIREBASE LIBRARIES -->
       <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
       <!-- THIS IS JUST A NICE LOOKING FONT -->
@@ -11,6 +11,7 @@
       <!--THIS IS NEEDED TO IMPORT JQUERY LIBRARIES -->  
       <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
       <!-- THIS IS TO IMPORT MY JS FILE -->
+      <script data-main="scripts/main" src="scripts/require.js"></script>
       <script src="index.js"></script>
       <link href="style.css" rel="stylesheet" />
       <title>ErrandBoi!</title>
@@ -27,7 +28,7 @@
             <p class="content">Ever have an emergency while you are in class? Life has got you all tied up but your tasks won't do themselves? Well, you are at the right place for help. Let ErrandBoi take the stress off your shoulders while you can do what really matters. Simply, fill out the form below with any* task that you may need help with and one of our drivers will help you out as soon as possible!</p>
             <br><br><br><br><br><br><br><br><br>
             <div class="form-style-5">
-               <form method="POST" action="thanks.html">
+               <form action="#">
                   <fieldset>
                      <legend><span class="number">1</span> Your Information</legend>
                      <input type="text" name="field1" id="name" placeholder="Your Name *">
@@ -49,7 +50,6 @@
                   </fieldset>
                   <input name="submit" type="submit" value="Apply" onClick="push()"/>
                </form>
-               <h3><?php include "email.php" ?></h3>
             </div>
          </div>
       </div>

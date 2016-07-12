@@ -7,8 +7,11 @@
   var locationField = document.getElementById('location');
   var miscField = document.getElementById('misc');
   var messageList = $('#example-messages'); // DELETE MAYBE?????
-  // var twilio = require('twilio');
-  // var client = new twilio.RestClient('AC713965b7bfb22cfd4658cb9ff997894a', 'bfe1503835b4966d5a78e081ea5c260c');
+  // Twilio Credentials
+  var accountSid = 'AC713965b7bfb22cfd4658cb9ff997894a';
+  var authToken = 'bfe1503835b4966d5a78e081ea5c260c';
+  //require the Twilio module and create a REST client
+  var client = require('twilio')(accountSid, authToken);
 
   //alert(messageField);
   // If the enter key is pressed, push the values in the text boxes to our database.
@@ -20,6 +23,12 @@
         location:document.getElementById('location').value,
         misc:document.getElementById('misc').value,
       })
+      ref.on("child_added", function(snapshot, prevChildKey) {
+        var newPost = snapshot.val();
+        client.sendMessage({ // if "sendMessage" doesnt work, try "sms.messages.create"
+          to:'+13177302557', from:'+13173644864', body:'You got a new request: \n' + newPost.name + '\n' + newPost.task + '\n' + newPost.contact + '\n' + newPost.location + '\n' + newPost.misc}, 
+          function( err, data ) {});
+      },  null, true)};
     //require the Twilio module and create a REST client
     //Send an SMS text message
   //   client.sms.messages.create({
@@ -40,7 +49,6 @@
 
   //   };
   // });
-  };
     // databaseLink.limitToLast(100).on('child_added', function (snapshot) {
     // // databaseLink.once("name","location","misc","contact","value", function (dataSnapshot){
     //   window.location.href = "sms:3177302557?body=" + messageField + nameField + contactField + locationField + miscField;
