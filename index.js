@@ -8,8 +8,8 @@
   var miscField = document.getElementById('misc');
   var messageList = $('#example-messages'); // DELETE MAYBE?????
   // Twilio Credentials
-  var accountSid = '{{AC713965b7bfb22cfd4658cb9ff997894a}}';
-  var authToken = '{{bfe1503835b4966d5a78e081ea5c260c}}';
+  // var accountSid = '{{AC713965b7bfb22cfd4658cb9ff997894a}}';
+  // var authToken = '{{bfe1503835b4966d5a78e081ea5c260c}}';
   //require the Twilio module and create a REST client
 
 
@@ -21,17 +21,17 @@
       location:document.getElementById('location').value,
       misc:document.getElementById('misc').value,
     })
-    require(['twilio'], function(twilio){
-      var client = twilio(accountSid, authToken);
-      client.messages.create({
-        to: "+13177302557",
-        from: "+13173644864",
-        body: "There is a new highest bidder. Visit {{websiteUrl}} to place another bid. All proceeds from the silent auction will go to the Samaritian House.",
-        mediaUrl: "http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg",
-      }, function(err, message) {
-        console.log(message.sid);
-      });
-    });
+    // require(['twilio'], function(twilio){
+    //   var client = twilio(accountSid, authToken);
+    //   client.messages.create({
+    //     to: "+13177302557",
+    //     from: "+13173644864",
+    //     body: "There is a new highest bidder. Visit {{websiteUrl}} to place another bid. All proceeds from the silent auction will go to the Samaritian House.",
+    //     mediaUrl: "http://farm2.static.flickr.com/1075/1404618563_3ed9a44a3a.jpg",
+    //   }, function(err, message) {
+    //     console.log(message.sid);
+    //   });
+    // });
   };
   //   require(['twilio'],function(twilio){
   //     var client = twilio(accountSid, authToken);
