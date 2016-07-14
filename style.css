@@ -7,7 +7,7 @@ body{
 .title{
 	color: red;
 	text-align: left;
-	padding-top: 25px;
+	padding-top: 30px;
     padding-left: 20px;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
@@ -38,7 +38,7 @@ header{
 	width: 100%;
 	position: relative;
 	top: 600px;
-	background: #FCFBE3;
+	background: #999999;
 	height: 1040px;
 }
 .content{
