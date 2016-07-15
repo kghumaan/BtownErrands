@@ -20,7 +20,8 @@
       contact:document.getElementById('contact').value,
       location:document.getElementById('location').value,
       misc:document.getElementById('misc').value,
-    })
+    }) 
+  };
     // require(['twilio'], function(twilio){
     //   var client = twilio(accountSid, authToken);
     //   client.messages.create({
@@ -32,7 +33,31 @@
     //     console.log(message.sid);
     //   });
     // });
-  };
+
+  function validateForm() {
+            var errormessage = "";
+            if (document.getElementById('name').value == "") {
+               errormessage += "Please enter your name. \n";
+               document.getElementById('name').style.borderColor = "red";
+            }
+            if (document.getElementById('contact').value == "") {
+               errormessage += "Please enter your contact. \n";
+               document.getElementById('contact').style.borderColor = "red";
+            }
+            if (document.getElementById('location').value == "") {
+               errormessage += "Tell us where to come! \n";
+               document.getElementById('location').style.borderColor = "red";
+            }
+            if (document.getElementById('task').value == "") {
+               errormessage += "Tell us how we can help! \n";
+               document.getElementById('task').style.borderColor = "red";
+            }
+            if (errormessage != "") {
+               alert(errormessage);
+               return false;
+            }
+            return true;
+         };
   //   require(['twilio'],function(twilio){
   //     var client = twilio(accountSid, authToken);
   //   ref.on("child_added", function(snapshot, prevChildKey) {

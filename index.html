@@ -17,31 +17,6 @@
       <title>Btown Errands</title>
    </head>
    <body>
-      <script>
-         function validateForm() {
-            var errormessage = "";
-            if (document.getElementById('name').value == "") {
-               errormessage += "Please enter your name. \n";
-               document.getElementById('name').style.borderColor = "red";
-            }
-            if (document.getElementById('contact').value == "") {
-               errormessage += "Please enter your contact. \n";
-               document.getElementById('contact').style.borderColor = "red";
-            }
-            if (document.getElementById('location').value == "") {
-               errormessage += "Tell us where to come! \n";
-               document.getElementById('location').style.borderColor = "red";
-            }
-            if (document.getElementById('task').value == "") {
-               errormessage += "Tell us how we can help! \n";
-               document.getElementById('task').style.borderColor = "red";
-            }
-            if (errormessage != "") {
-               alert(errormessage);
-               return false;
-            }
-         }
-</script>
       <div id="container">
          <header>
             <h1 class="title">Btown Errands</h1>
@@ -53,7 +28,7 @@
             <p class="content">Ever have an emergency while you are in class? Life has got you all tied up but your tasks won't do themselves? Well, you are at the right place for help. Let ErrandBoi take the stress off your shoulders while you can do what really matters. Simply, fill out the form below with any* task that you may need help with and one of our drivers will help you out as soon as possible!</p>
             <br><br><br><br><br><br><br><br><br>
             <div class="form-style-5">
-               <form action="send-sms.php">
+               <form action="send-sms.php" method="POST">
                   <fieldset>
                      <legend><span class="number">1</span> Your Information</legend>
                      <input type="text" name="field1" id="name" placeholder="Your Name *">
