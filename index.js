@@ -11,15 +11,6 @@
   // var accountSid = '{{AC713965b7bfb22cfd4658cb9ff997894a}}';
   // var authToken = '{{bfe1503835b4966d5a78e081ea5c260c}}';
   //require the Twilio module and create a REST client
-$(document).ready(function() {
-    $(window).scroll(function(e) {
-        var s = $(window).scrollTop(),
-            opacityVal = (s / 200);
-
-        $('.blurred-image').css('opacity', opacityVal);
-    });
-});
-
   function push() {
     databaseLink.push({
       name:document.getElementById('name').value, 

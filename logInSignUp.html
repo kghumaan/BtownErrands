@@ -21,40 +21,30 @@
 
    </head>
    <body>
+      <div id="fb-root"></div>
+         <script>(function(d, s, id) {
+           var js, fjs = d.getElementsByTagName(s)[0];
+           if (d.getElementById(id)) return;
+           js = d.createElement(s); js.id = id;
+           js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=270853463280526";
+           fjs.parentNode.insertBefore(js, fjs);
+         }(document, 'script', 'facebook-jssdk'));</script>
       <div id="container">
          <header>
-               
                <input class="button1" value="SIGN UP" type="submit" onClick="fbLogin()" />
                <input class="button2" value="CONTACT US" type="submit"/>
                <input class="button3" value="OUR TEAM" type="submit"/>
-               <img src="logo.png" class="logo"/>
+               <div class="logo"></div>
          </header>
          <div id="banner" class="wrapper">
             <div id="slide">
-               <div class="form-style-5" >
                   <form action="send-sms.php" method="POST">
                      <fieldset>
-                        <legend><span class="number">1</span> Your Information</legend>
-                        <input type="text" name="field1" id="name" placeholder="Your Name *">
-                        <input type="email" name="field2" id="contact"placeholder="Contact Information (Email, Phone Number, etc.) *">
-                        <input type="location" name="field3" id="location" placeholder="Your Location (i.e. McNutt, Hodge Hall, exact address, etc.)*">
-                        <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important"></textarea>
-                        <label for="job">Urgency:</label>
-                        <select id="job" name="field5">
-                           <optgroup label="Urgency level: just for us to prioritize properly">
-                              <option value="Not Urgent">Low (ETA: Up to an hour)</option>
-                              <option value="reading">Normal (ETA: Up to 45 mins)</option>
-                              <option value="boxing">Critical (ETA: ASAP!)</option>
-                           </optgroup>
-                        </select>
-                     </fieldset>
-                     <fieldset>
-                        <legend><span class="number">2</span>Task that needs completion</legend>
-                        <input type="text" id="task" name="field6" placeholder="Let Us Know How We Can Help!*"></input>
+                        YOOOOOOOO
+                        <div class="fb-login-button" data-max-rows="1" data-size="xlarge" data-show-faces="false" data-auto-logout-link="false"></div>
                      </fieldset>
                      <input name="submit" type="submit" value="Submit" onClick="push();validateForm();"/>
                   </form>
-               </div>
             </div>
          </div>
       </div>

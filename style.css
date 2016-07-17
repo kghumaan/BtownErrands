@@ -4,12 +4,10 @@ body, div, h1, h1, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form{
 body{
 	text-align: center;
 }
-.title{
-	color: red;
-	text-align: left;
-	padding-top: 10px;
-    padding-left: 20px;
-	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+.logo{
+	height: 55px;
+    width: 162px;
+    float: left;
 }
 
 header{
@@ -34,49 +32,11 @@ header{
 	text-shadow: 20px black;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     }
-.button1{
-    border-radius: 8px;
-    width: 100px;
-    margin-top: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    float: right;
-    border-style: solid;
-    border-color: red;
-    border-width: 2px;
-    color: red;
-}
-.button1:hover{
-    background-color: red;
-    color: white;
-}
-.button2{
-    border-radius: 8px;
-    width: 100px;
-    margin-top: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    float: right;
-    border-style: solid;
-    border-color: red;
-    border-width: 2px;
-    color: red;
-}
-.button2:hover{
-    background-color: red;
-    color: white;
-}
+.button1,
+.button2,
 .button3{
     border-radius: 8px;
-    width: 100px;
+    width: 120px;
     margin-top: 10px;
     margin-right: 5px;
     margin-left: 5px;
@@ -87,13 +47,18 @@ header{
     float: right;
     border-style: solid;
     border-color: red;
-    border-width: 2px;
+    border-width: 1.5px;
     color: red;
+    background-color: black;
+    font-size: 14px;
 }
+.button1:hover,
+.button2:hover,
 .button3:hover{
     background-color: red;
     color: white;
 }
+
 #slide{
     position: relative;
     bottom: -100%;

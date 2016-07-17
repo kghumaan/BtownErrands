@@ -4,21 +4,26 @@
 <meta charset="UTF-8">
 
 <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script data-main="index" src="require.js"></script>
 <link href="style2.css" rel="stylesheet"/>
 <title>Thank you!</title>
 
 </head>
 <body>
-<div id="container">
+<div id="container"><img src="logo.png" class="logo"/>
 	<header>
-		<h1 class="title">Btown Errands</h1>
+			
+			<input class="button1" value="Log In" type="submit" onClick="fbLogin()" />
+            <input class="button2" value="CONTACT US" type="submit"/>
+            <input class="button3" value="OUR TEAM" type="submit"/>
 	</header>
-	<div id="banner">
-		<h2>Bet, we got your back!</h2>
+	<div class="banner">
+		<div id="banner">
+		<h2>
+			<div class="bet" id="betAnimation">Bet, we got your back!</div>
+			<div class="betContent" id="betContentAnimation"><br>Someone is on their way to help! We may contact you if your instructions were unclear or if the request can not be met. Thank you for your patience!</div>
+		</h2>
 	</div>
-	<div id="content">
-		<p class="content">Someone has been informed to help you out as soon as possible! Please keep in mind that we may contact you if your instructions were unclear or if the request can not be met. We thank you for your patience!</p>
-</div>
-</div>
+	</div>
 </body>
 </html>
