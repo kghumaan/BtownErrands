@@ -5,11 +5,15 @@ body{
 	text-align: center;
 }
 .logo{
-	height: 55px;
-    width: 162px;
-    float: left;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 55px;
+  width: 162px;
+  float: left;
+  z-index: 222;
+  opacity: 1;
 }
-
 header{
 	height: 60px;
 	background: black;
@@ -18,7 +22,14 @@ header{
 	position: fixed;
     opacity: .8;
 }
-
+.banner{
+  background: black;
+  opacity: .8;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 60px;
+}
 #banner{
 	width: 100%;
 	height: 100%;
@@ -72,14 +83,17 @@ header{
 /* Form CSS */
 .form-style-5{
     position: relative;
-    top: 47px;
+    top: 0px;
     max-width: 700px;
     padding: 10px 20px;
     background: #f4f7f8;
     margin: 10px auto;
     border-radius: 8px;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-    opacity: .96;
+    opacity: 1;
+}
+.form-style-5:after{
+    opacity: 1;
 }
 .form-style-5 fieldset{
     border: none;
