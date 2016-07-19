@@ -24,14 +24,14 @@
       <div id="container">
          <img src="logo.png" class="logo"/>
          <header> 
-            <input class="button1" value="Log In" type="submit" onClick="fbLogin()" />
+            <input class="button1" value="LOG IN" type="submit" onClick="fbLogin()" />
             <input class="button2" value="CONTACT US" type="submit"/>
             <input class="button3" value="OUR TEAM" type="submit"/>
          </header>
          <div id="banner" class="wrapper">
-         <div class="banner">
+         <div class="banner"></div>
             <div id="slide">
-               <div class="form-style-5">
+               <div class="form-style-5" id="formOpacity">
                   <form action="send-sms.php" method="POST">
                      <fieldset>
                         <legend><span class="number">1</span> Your Information</legend>
@@ -55,8 +55,7 @@
                      <input name="submit" type="submit" value="Submit" onClick="push();validateForm();"/>
                   </form>
                </div>
-            </div>
-         </div>
+            </div>  
          </div>
       </div>
    </body>
