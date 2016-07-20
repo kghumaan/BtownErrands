@@ -3,7 +3,8 @@
   // Create javascript variables that link our previous HTML IDs.  Remember, we can't use regular HTML inside a script tag, so we need to use JQuery to reference any previous HTML.  A $ means we are using JQuery
   var messageField = document.getElementById('task');
   var nameField = document.getElementById('name');
-  var contactField = document.getElementById('contact');
+  var emailField = document.getElementById('email');
+  var phoneField = document.getElementById('phone');
   var locationField = document.getElementById('location');
   var miscField = document.getElementById('misc');
   var messageList = $('#example-messages'); // DELETE MAYBE?????
@@ -15,7 +16,8 @@
     databaseLink.push({
       name:document.getElementById('name').value, 
       task:document.getElementById('task').value,
-      contact:document.getElementById('contact').value,
+      email:document.getElementById('email').value,
+      phone:document.getElementById('phone').value,
       location:document.getElementById('location').value,
       misc:document.getElementById('misc').value,
     }) 
@@ -38,9 +40,13 @@
                errormessage += "Please enter your name. \n";
                document.getElementById('name').style.borderColor = "red";
             }
-            if (document.getElementById('contact').value == "") {
-               errormessage += "Please enter your contact. \n";
-               document.getElementById('contact').style.borderColor = "red";
+            if (document.getElementById('email').value != "") {
+                return true;
+             }else if (document.getElementById('phone').value != "")
+               return true;
+            }else{
+              errormessage += "Please enter a way for us to contact you. \n";
+              return false;
             }
             if (document.getElementById('location').value == "") {
                errormessage += "Tell us where to come! \n";
