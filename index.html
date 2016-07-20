@@ -31,28 +31,29 @@
          <div id="banner" class="wrapper">
          <div class="banner"></div>
             <div id="slide">
-               <div class="form-style-5" id="formOpacity">
+               <div class="form-style-5">
                   <form action="send-sms.php" method="POST">
                      <fieldset>
-                        <legend><span class="number">1</span> Your Information</legend>
+                        <legend><div class="formTitle"> Fill out the form below to request our help!</div></legend>
                         <input type="text" name="field1" id="name" placeholder="Your Name *">
-                        <input type="email" name="field2" id="contact"placeholder="Contact Information (Email, Phone Number, etc.) *">
-                        <input type="location" name="field3" id="location" placeholder="Your Location (i.e. McNutt, Hodge Hall, exact address, etc.)*">
-                        <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important"></textarea>
-                        <label for="job">Urgency:</label>
+                        <input type="text" name="field3" id="location" placeholder="Your Location (i.e. McNutt, exact address,  etc.)*">
+                        <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important">
+                        <input type="email" name="field2" id="email" placeholder="Email Address"><h4 style="padding-bottom: 3%; padding-left: 5px; float: left"><span class="number">or</span></h4>
+                        <input type="text" name="field2" id="phoneNumber" placeholder="Phone Number">
+                        <!-- <label for="job">Urgency:</label>
                         <select id="job" name="field5">
                            <optgroup label="Urgency level: just for us to prioritize properly">
                               <option value="Not Urgent">Low (ETA: Up to an hour)</option>
                               <option value="reading">Normal (ETA: Up to 45 mins)</option>
                               <option value="boxing">Critical (ETA: ASAP!)</option>
                            </optgroup>
-                        </select>
-                     </fieldset>
+                        </select> -->
+                   <!--   </fieldset>
                      <fieldset>
-                        <legend><span class="number">2</span>Task that needs completion</legend>
-                        <input type="text" id="task" name="field6" placeholder="Let Us Know How We Can Help!*"></input>
+                        <legend><span class="number">2</span>Task that needs completion</legend> -->
+                        <input type="text" id="task" name="field6" placeholder="Task that needs completion, let us know how we can help!*"></input>
                      </fieldset>
-                     <input name="submit" type="submit" value="Submit" onClick="push();validateForm();"/>
+                     <input name="submit" type="submit" value="Submit" onClick="push();return validateForm();"/>
                   </form>
                </div>
             </div>  
