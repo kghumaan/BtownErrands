@@ -11,15 +11,70 @@
 </head>
 <body>
 <div id="container">
-	<img src="logo.png" class="logo"/>
+	
 	<header>	
 			<input class="button1" value="LOG IN" type="submit" onClick="fbLogin()" />
             <input class="button2" value="CONTACT US" type="submit"/>
             <input class="button3" value="OUR TEAM" type="submit"/>
-            <div class="test"></div>
 	</header>
-	<div class="banner">
-		
+	<img src="logo.png" class="logo"/>
+	<div id="title">
+	<div class="title" id="titleAnimation">
+		<span id="a">MEET THE TEAM!</span>
+		<span id="b">KV Ghumaan</span>
+		<span id="c">Max Shafer</span>
+		<span id="d">Anav Maheshwari</span>
 	</div>
+	</div>
+	<div class="content" id="contentAnimation">
+	At Btown Errands, our team devotes themselves to deliver the best service when requested upon. As full time students, we dedicate any time we have left to make sure we can serve our community and serve as a helping hand. Btown Errands is one of our many initiatives in making life easier in the butiful city of Bloomington, Indiana. Go Hoosiers!
+	</div>
+
+		<!-- IMAGE ONE -->
+		<div onmouseover="document.getElementById('b').style.display = 'block';"
+		onmouseout="document.getElementById('b').style.display = 'none';">
+			<div onmouseover="document.getElementById('a').style.display = 'none';"
+			onmouseout="document.getElementById('a').style.display = 'block';">
+				<div class="image1" id="image1border">
+				</div>
+			</div>
+		</div>
+		<!-- IMAGE TWO -->
+		<div onmouseover="document.getElementById('c').style.display = 'block';"
+		onmouseout="document.getElementById('c').style.display = 'none';">
+			<div onmouseover="document.getElementById('a').style.display = 'none';"
+			onmouseout="document.getElementById('a').style.display = 'block';">
+				<div class="image2" id="image2border">
+				</div>
+			</div>
+		</div>
+		<!-- IMAGE THREE -->
+		<div onmouseover="document.getElementById('d').style.display = 'block';"
+		onmouseout="document.getElementById('d').style.display = 'none';">
+			<div onmouseover="document.getElementById('a').style.display = 'none';"
+			onmouseout="document.getElementById('a').style.display = 'block';">
+				<div class="image3" id="image3border">
+				</div>
+			</div>
+		</div>
+
+	<div class="banner"></div>
+<!-- //
+// $( document ).ready(function() {
+//     $('#1').mouseover(); 
+// });
+
+// $('#1').mouseover(function() {
+//   $('.content').html('This is a text example 1');
+// });
+
+// $('#2').mouseover(function() {
+//   $('.content').html('This is a text example 2');
+// });
+
+// $('#3').mouseover(function() {
+//   $('.content').html('This is a text example 3');
+// });
+//  -->
 </body>
 </html>
