@@ -65,6 +65,7 @@ header{
     color: red;
     background-color: black;
     font-size: 14px;
+    opacity: 1;
 }
 .button1:hover,
 .button2:hover,
@@ -74,6 +75,12 @@ header{
     color: white;
     opacity: 1;
     z-index: 9999;
+}
+.button1:focus,
+.button2:focus,
+.button3:focus,
+.button4:focus{
+    outline:0;
 }
 .bet{
   margin: auto;
