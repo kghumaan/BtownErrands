@@ -62,6 +62,10 @@
             }
             return true;
          };
+
+  $(".next").click(function(){
+    $(this).css("transform", "rotateY(180deg)");
+  });
   //   require(['twilio'],function(twilio){
   //     var client = twilio(accountSid, authToken);
   //   ref.on("child_added", function(snapshot, prevChildKey) {
