@@ -130,6 +130,16 @@ header{
   animation: slideafter 2s 1;
 }
 /* Form CSS */
+.next{
+  -webkit-transition-duration: 1s;
+  -moz-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+}
 .flex {
   display: flex;
   flex-direction: column;

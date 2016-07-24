@@ -219,6 +219,13 @@ header{
 .form-style-5 input[type="button"]:focus {
   outline:0;
 }
+.next{
+  transition-duration: 1s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+  transition-property: transform;
+}
 #name,
 #contact,
 #location,
