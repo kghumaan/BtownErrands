@@ -79,20 +79,15 @@ header{
 .button4:focus{
     outline:0;
 }
-#slide{
-    position: relative;
-    bottom: -100%;
-    transition: 1s;
-}
-.wrapper:hover #slide{
-    transition: 1s;
-    bottom: -7.5%;
-}
 #formOpacity{
     opacity: 1;
 }
 
 /* Form CSS */
+.form{
+  transform-style: preserve-3d;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
@@ -104,6 +99,7 @@ header{
 }
 .form-style-5 {
   position: relative;
+  top: 60px;
   max-width: 60%;
   max-height: 82vh;
   padding: 10px 20px;
@@ -111,6 +107,17 @@ header{
   margin: 10px auto;
   border-radius: 8px;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+#form-style-5-Animation{
+  animation: slide 2s 1;
+}
+@keyframes slide{
+  0%{
+    transform: translate3d(0px, -1000%, 0px);
+  }
+  100%{
+    transform: translate3d(0px, 0%, 0px);
+  }
 }
 .form-style-5:after {
   opacity: 1;
@@ -201,6 +208,7 @@ header{
   border-width: 1px 1px 3px;
   margin-bottom: 10px;
   box-shadow: 0 5px 0 #b30000;
+  border-radius: 4px;
 }
 .form-style-5 input[type="submit"]:active,
 .form-style-5 input[type="button"]:active {
