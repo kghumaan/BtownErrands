@@ -200,10 +200,16 @@ header{
   border: 1px solid red;
   border-width: 1px 1px 3px;
   margin-bottom: 10px;
+  box-shadow: 0 5px 0 #b30000;
 }
-.form-style-5 input[type="submit"]:hover,
-.form-style-5 input[type="button"]:hover {
-  background: #b30000;
+.form-style-5 input[type="submit"]:active,
+.form-style-5 input[type="button"]:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #b30000;
+}
+.form-style-5 input[type="submit"]:focus,
+.form-style-5 input[type="button"]:focus {
+  outline:0;
 }
 #name,
 #contact,
