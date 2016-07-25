@@ -11,10 +11,9 @@
   script.src = 'http://code.jquery.com/jquery-1.11.0.min.js';
   script.type = 'text/javascript';
   document.getElementsByTagName('head')[0].appendChild(script);
-  $(".next").click(function(){
-    alert($( this ).css( "transform" ));
-    $(".form").css("transform", "rotateY(180deg)");
-  });
+
+
+
   // Twilio Credentials
   // var accountSid = '{{AC713965b7bfb22cfd4658cb9ff997894a}}';
   // var authToken = '{{bfe1503835b4966d5a78e081ea5c260c}}';
@@ -51,7 +50,7 @@
                 return true;
              }else if (document.getElementById('phone').value != "")
                return true;
-            }else{
+            }else {
               errormessage += "Please enter a way for us to contact you. \n";
               return false;
             }

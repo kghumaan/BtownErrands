@@ -23,6 +23,15 @@
 
       <title>Btown Errands</title>
 
+      <script type="text/javascript">
+      $(document).ready(function() {
+         $("input[name='next']").on("click", function(){
+         // console.log( "The Button Worked!" );
+         $(".form").css("transform", "rotateY(180deg)");
+         $(".form").addClass("");
+      })
+      });
+    </script>
    </head>
    <body>
       <div id="container">
@@ -35,15 +44,16 @@
          </header>
          <div id="banner">
          <div class="banner"></div>
+            <div class="form">
                <div class="form-style-5" id="form-style-5-Animation">
-                  <div class="form">
+                  
                   <form action="send-sms.php" method="POST">
                      <fieldset class='flex'>
                         <legend><div class="formTitle"> Fill out the form below to request help!</div></legend>
                         <input type="text" name="field1" id="name" placeholder="Your Name *">
                         <input type="text" name="field3" id="location" placeholder="Your Location (i.e. McNutt, exact address, etc.)*">
                         <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important">
-                        <input type="email" name="field2" id="email" placeholder="Email Address"><h4 style="padding-bottom: 3%; padding-left: 5px; float: left"><span class="number">or</span></h4>
+                        <input type="email" name="field2" id="email" placeholder="Email Address"><span class="number">or</span></h4>
                         <input type="text" name="field5" id="phone" placeholder="Phone Number">
                         <!-- <label for="job">Urgency:</label>
                         <select id="job" name="field5">
@@ -59,6 +69,12 @@
                         <input type="text" id="task" name="field6" placeholder="Task that needs completion, let us know how we can help!*"></input>
                      </fieldset>
                      <input name="next" type="button" value="Next" class="next"/>
+                  <div class="back">
+                     <fieldset>
+                        <h1 style="color:red">YOOOOOOO</h1>
+
+                     </fieldset>
+                  </div>
                      <!-- <input name="submit" type="submit" value="Submit" onClick="push();return validateForm();"/> -->
                   </form>
                   </div>

@@ -86,6 +86,10 @@ header{
 /* Form CSS */
 .form{
   transform-style: preserve-3d;
+    -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
 }
 
 .flex {
@@ -109,11 +113,11 @@ header{
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 #form-style-5-Animation{
-  animation: slide 2s 1;
+  animation: slide 3s 1;
 }
 @keyframes slide{
   0%{
-    transform: translate3d(0px, -1000%, 0px);
+    transform: translate3d(0px, 1000%, 0px);
   }
   100%{
     transform: translate3d(0px, 0%, 0px);
@@ -152,7 +156,7 @@ header{
   font-size: 16px;
   margin: 0;
   outline: 0;
-  padding: 2%;
+  padding-left: 2%;
   height: 6%;
   width: 100%;
   -webkit-box-sizing: border-box;
@@ -191,6 +195,7 @@ header{
   text-align: center;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
   border-radius: 0px 15px 15px 15px;
+  margin-bottom: 3%;
 }
 .form-style-5 input[type="submit"],
 .form-style-5 input[type="button"] {
@@ -220,7 +225,10 @@ header{
   outline:0;
 }
 .next{
-  transition-duration: 1s;
+  -webkit-transition-duration: .01s;
+  -moz-transition-duration: .01s;
+  -o-transition-duration: .01s;
+  transition-duration: .01s;
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   -o-transition-property: -o-transform;
