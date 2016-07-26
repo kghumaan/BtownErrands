@@ -26,20 +26,22 @@
       <script type="text/javascript">
       $(document).ready(function() {
          $("input[name='next']").on("click", function(){
-         // console.log( "The Button Worked!" );
+          console.log( "The NEXT Button Worked!" );
          $(".form").css("transform", "rotateY(180deg)");
       })
-     
+         $("input[name='back']").on("click", function(){
+          console.log( "The BACK Button Worked!" );
+         $(".formFlipAgain").css("transform", "rotateY(180deg)");
+      })
       });
       function showBack(){
-         setTimeout(function(){document.getElementById("backSide").style.display="block";}, 630);
-         setTimeout(function(){document.getElementById("frontSide").style.display="none";}, 630);
+         setTimeout(function(){document.getElementById("backSide").style.display="block";}, 600);
+         setTimeout(function(){document.getElementById("frontSide").style.display="none";}, 600);
       };
-      $("input[name = 'next']").click(function(){
-         console.log( "The Button Worked!" );
-         $("#frontSide").delay("fast").fadeIn();
-      });
-      
+      function showFront(){
+         setTimeout(function(){document.getElementById("frontSide").style.display="block";}, 600);
+         setTimeout(function(){document.getElementById("backSide").style.display="none";}, 600);
+      };
     </script>
    </head>
    <body>
@@ -53,6 +55,7 @@
          </header>
          <div id="banner">
          <div class="banner"></div>
+            <div class="formFlipAgain">
             <div class="form" id='flex'>
                <div class="form-style-5" id="form-style-5-Animation">
                   <div id="frontSide">
@@ -61,41 +64,36 @@
                         <legend><div class="formTitle"> Fill out the form below to request help!</div></legend>
                         <input type="text" name="field1" id="name" placeholder="Your Name *">
                         <input type="text" name="field3" id="location" placeholder="Your Location (i.e. McNutt, exact address, etc.)*">
-                        <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important">
-                        <input type="email" name="field2" id="email" placeholder="Email Address"><span class="number">or</span></h4>
+                        <input type="email" name="field2" id="email" placeholder="Email Address">
+                        <span class="number">or</span>
                         <input type="text" name="field5" id="phone" placeholder="Phone Number">
-                        <!-- <label for="job">Urgency:</label>
+                        <textarea type="text" id="task" name="field6" rows="1" placeholder="Task that needs completion, let us know how we can help!*"></textarea>
+                     </fieldset>
+                  <input name="next" type="button" value="Next &#x21fe;" class="next" onClick="showBack();"/> 
+               </div>
+                  <div id="backSide" style="display: none;">
+                        <input name="back" class="Button" type="button" onClick="showFront();" value="&#x21fd; &nbsp; back" id="backButton"/><fieldset>
+                        <legend><div class="formTitle"> Please fill all required fields!</div></legend>
+                        <input type="text" name="field1" id="name" placeholder="Your Name *">
+                        <input type="text" name="field3" id="location" placeholder="Your Location (i.e. McNutt, exact address, etc.)*">
+                        <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important">
+                        <input type="email" name="field2" id="email" placeholder="Email Address">
+                        <label for="job">Urgency:</label>
                         <select id="job" name="field5">
                            <optgroup label="Urgency level: just for us to prioritize properly">
                               <option value="Not Urgent">Low (ETA: Up to an hour)</option>
                               <option value="reading">Normal (ETA: Up to 45 mins)</option>
                               <option value="boxing">Critical (ETA: ASAP!)</option>
                            </optgroup>
-                        </select> -->
-                   <!--   </fieldset>
-                     <fieldset>
-                        <legend><span class="number">2</span>Task that needs completion</legend> -->
-                        <input type="text" id="task" name="field6" placeholder="Task that needs completion, let us know how we can help!*"></input>
-                     </fieldset>
-                     <input name="next" type="button" value="Next" class="next" onClick="showBack()"/> 
-                  </div>
-                  <div id="backSide" style="display: none;">
-                     <fieldset>
-                        <legend><div class="formTitle"> THIS IS THE BACL, REPLACE LATER</div></legend>
-                        <input type="text" name="field1" id="name" placeholder="Your Name *">
-                        <input type="text" name="field3" id="location" placeholder="Your Location (i.e. McNutt, exact address, etc.)*">
+                        </select>
                         <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important">
-                        <input type="email" name="field2" id="email" placeholder="Email Address"><span class="number">or</span>
-                        <input type="text" name="field5" id="phone" placeholder="Phone Number">
-                        <input type="text" id="task" name="field6" placeholder="Task that needs completion, let us know how we can help!*"></input>
                      </fieldset>
                       <input name="submit" type="submit" value="Submit" onClick="push();return validateForm();"/>
                      </fieldset>
                   </div>
                   </form>
+               </div>   
                </div>
-                     
-                  
             </div>
          </div>
       </div>

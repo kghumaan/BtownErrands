@@ -91,6 +91,13 @@ header{
   -o-transition-duration: 2s;
   transition-duration: 2s;
 }
+.formFlipAgain{
+  transform-style: preserve-3d;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  transition-duration: 2s;
+}
 
 #flex {
   display: flex;
@@ -147,7 +154,6 @@ header{
 .form-style-5 input[type="search"],
 .form-style-5 input[type="time"],
 .form-style-5 input[type="url"],
-.form-style-5 textarea,
 .form-style-5 select {
   font-family: Georgia, "Times New Roman", Times, serif;
   background: rgba(255, 255, 255, .1);
@@ -158,6 +164,25 @@ header{
   outline: 0;
   padding-left: 2%;
   height: 6%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 3%;
+}
+.form-style-5 textarea{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgba(255, 255, 255, .1);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 0;           
+  outline: 0;
+  padding-left: 2%;
+  height: 12%;                          /*Changing height for task textarea*/
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -205,10 +230,27 @@ header{
   color: #FCFBE3;
   margin: 0 auto;
   background: red;
-  font-size: 18px;
+  font-size: 22px;
   text-align: center;
   font-style: normal;
   width: 100%;
+  border: 1px solid red;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 0 #b30000;
+  border-radius: 4px;
+}
+.form-style-5 input[type="backButton"] {
+  position: relative;
+  display: block;
+  padding: 10px 39px 10px 39px;
+  color: #FCFBE3;
+  margin: 0 auto;
+  background: red;
+  font-size: 22px;
+  text-align: center;
+  font-style: normal;
+  width: 140px;
   border: 1px solid red;
   border-width: 1px 1px 3px;
   margin-bottom: 10px;
@@ -240,6 +282,27 @@ header{
 -o-transform: scale(-1, 1);
 -ms-transform: scale(-1, 1);
 transform: scale(-1, 1);
+}
+
+#backButton{
+  background: red;
+  color: white;
+  box-shadow: 0 2px 0 #b30000;
+  border-radius: 4px;
+  border-color: red;
+  position: absolute;
+  float: left;
+  left: 15px;
+  top: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+
+  width: 90px;
+  height: 27px;
+  font-size: 105%;
+  outline: 0;
 }
 #name,
 #contact,
