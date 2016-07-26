@@ -92,7 +92,7 @@ header{
   transition-duration: 2s;
 }
 
-.flex {
+#flex {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -233,6 +233,13 @@ header{
   -moz-transition-property: -moz-transform;
   -o-transition-property: -o-transform;
   transition-property: transform;
+}
+#backSide{
+-moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+-ms-transform: scale(-1, 1);
+transform: scale(-1, 1);
 }
 #name,
 #contact,
