@@ -1,25 +1,9 @@
-body, div, h1, h1, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form{
-	margin: 0; padding: 0; border: 0;
-}
-body{
-	text-align: center;
-}
-.logo{
-  position: absolute;
-  left: 0;
-  top: 0;
-  height: 55px;
-  width: 162px;
-  float: left;
-  z-index: 222;
-  opacity: 1;
-}
 header{
 	height: 60px;
 	width: 100%;
 	z-index: 10;
 	position: fixed;
-    opacity: .8;
+  opacity: .8;
 }
 .banner{
     background: black;
@@ -29,13 +13,12 @@ header{
     top: 0px;
     opacity: .8;
 }
-
 #banner{
 	width: 100%;
 	height: 100%;
 	position: fixed;
 	top: 0px;
-	background: url("banner.jpg");
+	background: url("../Images/banner.jpg");
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	padding-top: 10px;
@@ -43,60 +26,20 @@ header{
 	text-shadow: 20px black;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
-.button1,
-.button2,
-.button3,
-.button4{
-    border-radius: 8px;
-    width: 120px;
-    margin-top: 10px;
-    margin-right: 5px;
-    margin-left: 5px;
-    padding-top: 10px;
-    padding-right: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    float: right;
-    border-style: solid;
-    border-color: red;
-    border-width: 1.5px;
-    color: red;
-    background-color: black;
-    font-size: 14px;
-}
-.button1:hover,
-.button2:hover,
-.button3:hover,
-.button4:hover{
-    background-color: red;
-    color: white;
-    opacity: 1;
-    z-index: 9999;
-}
-.button1:focus,
-.button2:focus,
-.button3:focus,
-.button4:focus{
-    outline:0;
-}
-#formOpacity{
-    opacity: 1;
-}
-
 /* Form CSS */
 .form{
   transform-style: preserve-3d;
     -webkit-transition-duration: 2s;
   -moz-transition-duration: 2s;
   -o-transition-duration: 2s;
-  transition-duration: 2s;
+  animation-duration: 2s;
 }
 .formFlipAgain{
   transform-style: preserve-3d;
   -webkit-transition-duration: 2s;
   -moz-transition-duration: 2s;
   -o-transition-duration: 2s;
-  transition-duration: 2s;
+  animation-duration: 2s;
 }
 
 #flex {
@@ -106,7 +49,7 @@ header{
   align-items: space-between;
 }
 .formTitle {
-  border-bottom: solid red;
+  border-bottom: solid #b30000;
 }
 .form-style-5 {
   position: relative;
@@ -202,14 +145,14 @@ header{
 .form-style-5 input[type="location"]:focus,
 .form-style-5 textarea:focus,
 .form-style-5 select:focus {
-  background: #d2d9dd;
+  background: #b30000;
 }
 .form-style-5 select {
   -webkit-appearance: menulist-button;
   height: 35px;
 }
 .form-style-5 .number {
-  background: red;
+  background: #b30000;
   color: #FCFBE3;
   height: 25px;
   width: 25px;
@@ -222,6 +165,11 @@ header{
   border-radius: 0px 15px 15px 15px;
   margin-bottom: 3%;
 }
+#number{
+  float: left;
+  margin-bottom: 1.8vh;
+  margin-left: .07vw;
+}
 .form-style-5 input[type="submit"],
 .form-style-5 input[type="button"] {
   position: relative;
@@ -229,38 +177,38 @@ header{
   padding: 10px 39px 10px 39px;
   color: #FCFBE3;
   margin: 0 auto;
-  background: red;
+  background: #b30000;
   font-size: 22px;
   text-align: center;
   font-style: normal;
   width: 100%;
-  border: 1px solid red;
+  border: 1px solid #b30000;
   border-width: 1px 1px 3px;
   margin-bottom: 10px;
-  box-shadow: 0 5px 0 #b30000;
+  box-shadow: 0 5px 0 #800000;
   border-radius: 4px;
 }
 .form-style-5 input[type="backButton"] {
   position: relative;
   display: block;
   padding: 10px 39px 10px 39px;
-  color: #FCFBE3;
+  color: #b30000;
   margin: 0 auto;
   background: red;
   font-size: 22px;
   text-align: center;
   font-style: normal;
   width: 140px;
-  border: 1px solid red;
+  border: 1px solid #800000;
   border-width: 1px 1px 3px;
   margin-bottom: 10px;
-  box-shadow: 0 5px 0 #b30000;
+  box-shadow: 0 5px 0 #990000;
   border-radius: 4px;
 }
 .form-style-5 input[type="submit"]:active,
 .form-style-5 input[type="button"]:active {
   transform: translateY(3px);
-  box-shadow: 0 2px 0 #b30000;
+  box-shadow: 0 2px 0 #990000;
 }
 .form-style-5 input[type="submit"]:focus,
 .form-style-5 input[type="button"]:focus {
@@ -285,11 +233,11 @@ transform: scale(-1, 1);
 }
 
 #backButton{
-  background: red;
-  color: white;
-  box-shadow: 0 2px 0 #b30000;
+  background: white;
+  color: #b30000;
+  box-shadow: 0 3px 0 #b30000;
   border-radius: 4px;
-  border-color: red;
+  border-color: #b30000;
   position: absolute;
   float: left;
   left: 15px;
@@ -298,11 +246,13 @@ transform: scale(-1, 1);
   padding-right: 2px;
   padding-top: 2px;
   padding-bottom: 2px;
-
   width: 90px;
   height: 27px;
   font-size: 105%;
   outline: 0;
+}
+#backButton:active{
+  box-shadow: 0 0px 0 #990000;
 }
 #name,
 #contact,

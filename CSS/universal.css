@@ -1,0 +1,55 @@
+body, div, h1, h1, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form{
+  margin: 0; padding: 0; border: 0;
+}
+body{
+  text-align: center;
+}
+.logo{
+  background: url(../Images/logo.png);
+  background-size: contain;
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 55px;
+  width: 162px;
+  float: left;
+  z-index: 222;
+  opacity: 1;
+}
+.button1,
+.button2,
+.button3,
+.button4{
+    border-radius: 8px;
+    width: 120px;
+    margin-top: 10px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    float: right;
+    border-style: solid;
+    border-color: red;
+    border-width: 1.5px;
+    color: red;
+    background-color: black;
+    font-size: 14px;
+    opacity: 1;
+}
+.button1:hover,
+.button2:hover,
+.button3:hover,
+.button4:hover{
+    background-color: red;
+    color: white;
+    opacity: 1;
+    z-index: 9999;
+}
+.button1:focus,
+.button2:focus,
+.button3:focus,
+.button4:focus{
+    outline:0;
+}

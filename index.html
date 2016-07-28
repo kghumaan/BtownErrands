@@ -7,7 +7,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-      <script src="jquery-1.12.4.min.js"></script>
       <!--THIS IS NEEDED TO IMPORT FIREBASE LIBRARIES -->
       <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
       <!-- THIS IS JUST A NICE LOOKING FONT -->
@@ -17,36 +16,40 @@
       <!-- THIS IS TO IMPORT MY JS FILE -->
       <script data-main="index" src="require.js"></script>
       <!-- CSS -->
-      <link rel="stylesheet" type="text/css" href="style.css"/>
+      <link rel="stylesheet" type="text/css" href="CSS/universal.css"/>
+      <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
       <!-- Facebook Simple Login -->
       <script type="text/javascript" src="facebookLogin.js"></script>
 
       <title>Btown Errands</title>
 
       <script type="text/javascript">
+
       $(document).ready(function() {
          $("input[name='next']").on("click", function(){
           console.log( "The NEXT Button Worked!" );
          $(".form").css("transform", "rotateY(180deg)");
       })
-         $("input[name='back']").on("click", function(){
-          console.log( "The BACK Button Worked!" );
-         $(".formFlipAgain").css("transform", "rotateY(180deg)");
-      })
+         $("input[name='back']").on("click", function() {
+          console.log("The BACK Button Worked!");
+         $(".form").css("transform", "rotateY(0deg)");
+        })
       });
       function showBack(){
-         setTimeout(function(){document.getElementById("backSide").style.display="block";}, 600);
-         setTimeout(function(){document.getElementById("frontSide").style.display="none";}, 600);
+         console.log( "timeout worked" );
+         setTimeout(function(){document.getElementById("backSide").style.display="block";}, 590);
+         setTimeout(function(){document.getElementById("frontSide").style.display="none";}, 590);
       };
       function showFront(){
-         setTimeout(function(){document.getElementById("frontSide").style.display="block";}, 600);
-         setTimeout(function(){document.getElementById("backSide").style.display="none";}, 600);
+         console.log( "timeout worked" );
+         setTimeout(function(){document.getElementById("frontSide").style.display="block";}, 590);
+         setTimeout(function(){document.getElementById("backSide").style.display="none";}, 590);
       };
     </script>
    </head>
    <body>
       <div id="container">
-         <img src="logo.png" class="logo"/>
+         <div class="logo"></div>
          <header> 
             <a href="index.html"><input class="button1" value="HOME" type="button"/></a>  
             <input class="button2" value="LOG IN" type="submit" onClick="fbLogin()" />
@@ -55,7 +58,6 @@
          </header>
          <div id="banner">
          <div class="banner"></div>
-            <div class="formFlipAgain">
             <div class="form" id='flex'>
                <div class="form-style-5" id="form-style-5-Animation">
                   <div id="frontSide">
@@ -65,7 +67,7 @@
                         <input type="text" name="field1" id="name" placeholder="Your Name *">
                         <input type="text" name="field3" id="location" placeholder="Your Location (i.e. McNutt, exact address, etc.)*">
                         <input type="email" name="field2" id="email" placeholder="Email Address">
-                        <span class="number">or</span>
+                        <div id="number"><span class="number">or</span></div>
                         <input type="text" name="field5" id="phone" placeholder="Phone Number">
                         <textarea type="text" id="task" name="field6" rows="1" placeholder="Task that needs completion, let us know how we can help!*"></textarea>
                      </fieldset>
@@ -93,7 +95,6 @@
                   </div>
                   </form>
                </div>   
-               </div>
             </div>
          </div>
       </div>

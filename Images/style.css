@@ -1,11 +1,8 @@
-/*for 'thank you' page
-*/
-
 body, div, h1, h1, h3, h4, h5, h6, p, ul, ol, li, dl, dt, dd, img, form{
-  margin: 0; padding: 0; border: 0;
+	margin: 0; padding: 0; border: 0;
 }
 body{
-  text-align: center;
+	text-align: center;
 }
 .logo{
   position: absolute;
@@ -18,35 +15,33 @@ body{
   opacity: 1;
 }
 header{
-  height: 100%;
-  background: black;
-  width: 100%;
-  position: fixed;
-  z-index: 1;
-  opacity: .8;
+	height: 60px;
+	width: 100%;
+	z-index: 10;
+	position: fixed;
+    opacity: .8;
 }
 .banner{
-  width: 100%;
-  height: 100%;
-  top: 0px;
-  position: fixed;
-  background: url("banner2.jpg");
-  background-size: 100% 100%;
-  background-repeat: no-repeat;
-  color: red;
-  padding-top: 140px;
-  font-size: 290%;
-  text-shadow: 20px black;
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+    background: black;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    opacity: .8;
 }
+
 #banner{
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 60px;
-}
-#banner:after{
-  color: red;
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0px;
+	background: url("banner.jpg");
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	padding-top: 10px;
+	font-size: 100%;
+	text-shadow: 20px black;
+	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 .button1,
 .button2,
@@ -63,18 +58,17 @@ header{
     padding-left: 10px;
     float: right;
     border-style: solid;
-    border-color: red;
+    border-color: #b30000;
     border-width: 1.5px;
-    color: red;
+    color: #b30000;
     background-color: black;
     font-size: 14px;
-    opacity: 1;
 }
 .button1:hover,
 .button2:hover,
 .button3:hover,
 .button4:hover{
-    background-color: red;
+    background-color: #b30000;
     color: white;
     opacity: 1;
     z-index: 9999;
@@ -85,63 +79,38 @@ header{
 .button4:focus{
     outline:0;
 }
-.bet{
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  top: 200px;
-  color: red;
-  font-size: 210%;
-}
-@keyframes slide{
-  0%{
-    transform: translate3d(0px, -1000%, 0px);
-  }
-  100%{
-    transform: translate3d(0px, 0%, 0px);
-  }
-}
-#betAnimation{
-  animation: slide 2s 1;
-}
-.betContent{
-  margin: auto;
-  position: absolute;
-  top: 0; left: 0; bottom: 0; right: 0;
-  top: 300px;
-  font-size: 15px;
-  width: 650px;
-  
-  color: red;
+#formOpacity{
+    opacity: 1;
 }
 
-@keyframes slideafter{
-  0%{
-    transform: translate3d(0px, -1000%, 0px);
-  }
-  50%{
-    transform: translate3d(0px, -500%, 0px);
-  }
-  100%{
-    transform: translate3d(0px, 0%, 0px);
-  }
-}
-#betContentAnimation{
-  animation: slideafter 2s 1;
-}
 /* Form CSS */
+.form{
+  transform-style: preserve-3d;
+    -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  animation-duration: 2s;
+}
+.formFlipAgain{
+  transform-style: preserve-3d;
+  -webkit-transition-duration: 2s;
+  -moz-transition-duration: 2s;
+  -o-transition-duration: 2s;
+  animation-duration: 2s;
+}
 
-.flex {
+#flex {
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: space-between;
 }
 .formTitle {
-  border-bottom: solid red;
+  border-bottom: solid #b30000;
 }
 .form-style-5 {
   position: relative;
+  top: 60px;
   max-width: 60%;
   max-height: 82vh;
   padding: 10px 20px;
@@ -149,6 +118,17 @@ header{
   margin: 10px auto;
   border-radius: 8px;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+}
+#form-style-5-Animation{
+  animation: slide 3s 1;
+}
+@keyframes slide{
+  0%{
+    transform: translate3d(0px, 1000%, 0px);
+  }
+  100%{
+    transform: translate3d(0px, 0%, 0px);
+  }
 }
 .form-style-5:after {
   opacity: 1;
@@ -174,7 +154,6 @@ header{
 .form-style-5 input[type="search"],
 .form-style-5 input[type="time"],
 .form-style-5 input[type="url"],
-.form-style-5 textarea,
 .form-style-5 select {
   font-family: Georgia, "Times New Roman", Times, serif;
   background: rgba(255, 255, 255, .1);
@@ -183,8 +162,27 @@ header{
   font-size: 16px;
   margin: 0;
   outline: 0;
-  padding: 2%;
+  padding-left: 2%;
   height: 6%;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  -webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 3%;
+}
+.form-style-5 textarea{
+  font-family: Georgia, "Times New Roman", Times, serif;
+  background: rgba(255, 255, 255, .1);
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  margin: 0;           
+  outline: 0;
+  padding-left: 2%;
+  height: 12%;                          /*Changing height for task textarea*/
   width: 100%;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -204,14 +202,14 @@ header{
 .form-style-5 input[type="location"]:focus,
 .form-style-5 textarea:focus,
 .form-style-5 select:focus {
-  background: #d2d9dd;
+  background: #b30000;
 }
 .form-style-5 select {
   -webkit-appearance: menulist-button;
   height: 35px;
 }
 .form-style-5 .number {
-  background: red;
+  background: #b30000;
   color: #FCFBE3;
   height: 25px;
   width: 25px;
@@ -222,6 +220,12 @@ header{
   text-align: center;
   text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
   border-radius: 0px 15px 15px 15px;
+  margin-bottom: 3%;
+}
+#number{
+  float: left;
+  margin-bottom: 1.8vh;
+  margin-left: .07vw;
 }
 .form-style-5 input[type="submit"],
 .form-style-5 input[type="button"] {
@@ -230,28 +234,82 @@ header{
   padding: 10px 39px 10px 39px;
   color: #FCFBE3;
   margin: 0 auto;
-  background: red;
-  font-size: 18px;
+  background: #b30000;
+  font-size: 22px;
   text-align: center;
   font-style: normal;
   width: 100%;
-  border: 1px solid red;
+  border: 1px solid #b30000;
   border-width: 1px 1px 3px;
   margin-bottom: 10px;
+  box-shadow: 0 5px 0 #800000;
+  border-radius: 4px;
 }
-.form-style-5 input[type="submit"]:hover,
-.form-style-5 input[type="button"]:hover {
-  background: #b30000;
+.form-style-5 input[type="backButton"] {
+  position: relative;
+  display: block;
+  padding: 10px 39px 10px 39px;
+  color: #b30000;
+  margin: 0 auto;
+  background: red;
+  font-size: 22px;
+  text-align: center;
+  font-style: normal;
+  width: 140px;
+  border: 1px solid #800000;
+  border-width: 1px 1px 3px;
+  margin-bottom: 10px;
+  box-shadow: 0 5px 0 #990000;
+  border-radius: 4px;
+}
+.form-style-5 input[type="submit"]:active,
+.form-style-5 input[type="button"]:active {
+  transform: translateY(3px);
+  box-shadow: 0 2px 0 #990000;
+}
+.form-style-5 input[type="submit"]:focus,
+.form-style-5 input[type="button"]:focus {
+  outline:0;
 }
 .next{
-  -webkit-transition-duration: 1s;
-  -moz-transition-duration: 1s;
-  -o-transition-duration: 1s;
-  transition-duration: 1s;
+  -webkit-transition-duration: .01s;
+  -moz-transition-duration: .01s;
+  -o-transition-duration: .01s;
+  transition-duration: .01s;
   -webkit-transition-property: -webkit-transform;
   -moz-transition-property: -moz-transform;
   -o-transition-property: -o-transform;
   transition-property: transform;
+}
+#backSide{
+-moz-transform: scale(-1, 1);
+-webkit-transform: scale(-1, 1);
+-o-transform: scale(-1, 1);
+-ms-transform: scale(-1, 1);
+transform: scale(-1, 1);
+}
+
+#backButton{
+  background: white;
+  color: #b30000;
+  box-shadow: 0 3px 0 #b30000;
+  border-radius: 4px;
+  border-color: #b30000;
+  position: absolute;
+  float: left;
+  left: 15px;
+  top: 3px;
+  padding-left: 2px;
+  padding-right: 2px;
+  padding-top: 2px;
+  padding-bottom: 2px;
+  width: 90px;
+  height: 27px;
+  font-size: 105%;
+  outline: 0;
+}
+#backButton:active{
+  box-shadow: 0 0px 0 #990000;
 }
 #name,
 #contact,

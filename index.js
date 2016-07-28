@@ -48,9 +48,9 @@
             }
             if (document.getElementById('email').value != "") {
                 return true;
-             }else if (document.getElementById('phone').value != "")
+             } else if (document.getElementById('phone').value != ""){
                return true;
-            }else {
+            } else {
               errormessage += "Please enter a way for us to contact you. \n";
               return false;
             }
