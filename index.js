@@ -13,11 +13,13 @@
   document.getElementsByTagName('head')[0].appendChild(script);
 
 
+    var btn = document.getElementById('home')
+    btn.addEventListener('click', function(){
+      console.log("click!")
+      document.location.href = 'index.html'
+    });
 
-  // Twilio Credentials
-  // var accountSid = '{{AC713965b7bfb22cfd4658cb9ff997894a}}';
-  // var authToken = '{{bfe1503835b4966d5a78e081ea5c260c}}';
-  //require the Twilio module and create a REST client
+
   function push() {
     databaseLink.push({
       name:document.getElementById('name').value, 
