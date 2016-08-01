@@ -9,6 +9,8 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <!--THIS IS NEEDED TO IMPORT FIREBASE LIBRARIES -->
       <script src="https://cdn.firebase.com/js/client/2.4.2/firebase.js"></script>
+      <!-- AngularFire -->
+      <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script>
       <!-- THIS IS JUST A NICE LOOKING FONT -->
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
       <!--THIS IS NEEDED TO IMPORT JQUERY LIBRARIES -->  
@@ -24,7 +26,16 @@
       <title>Btown Errands</title>
 
       <script type="text/javascript">
-
+      var ref = new Firebase('https://errandboi-f1cf5.firebaseio.com/'); 
+      function fbLogin(){
+      ref.authWithOAuthRedirect("facebook", function(error) {
+        if (error) {
+          console.log("Login Failed!", error);
+        } else {
+          // We'll never get here, as the page will redirect on success.
+        }
+      });
+   };
       $(document).ready(function() {
          $("input[name='next']").on("click", function(){
           console.log( "The NEXT Button Worked!" );
@@ -36,14 +47,18 @@
         })
       });
       function showBack(){
-         console.log( "timeout worked" );
+         // console.log( "timeout worked" );
          setTimeout(function(){document.getElementById("backSide").style.display="block";}, 590);
          setTimeout(function(){document.getElementById("frontSide").style.display="none";}, 590);
+         setTimeout(function(){document.getElementById("formHatBack").style.display="block";}, 590);
+         setTimeout(function(){document.getElementById("formHat").style.display="none";}, 590);
       };
       function showFront(){
-         console.log( "timeout worked" );
+         // console.log( "timeout worked" );
          setTimeout(function(){document.getElementById("frontSide").style.display="block";}, 590);
          setTimeout(function(){document.getElementById("backSide").style.display="none";}, 590);
+         setTimeout(function(){document.getElementById("formHatBack").style.display="none";}, 590);
+         setTimeout(function(){document.getElementById("formHat").style.display="block";}, 590);
       };
     </script>
    </head>
@@ -52,14 +67,18 @@
          <div class="logo"></div>
          <header> 
             <a href="index.html"><input class="button1" value="HOME" type="button"/></a>  
-            <!-- <input class="button2" value="LOG IN" type="submit" onClick="fbLogin()" />
-            <input class="button3" value="CONTACT US" type="submit"/> -->
+            <input class="button3" value="LOG IN" type="submit" id="facebook"/>
+            <!--<input class="button3" value="CONTACT US" type="submit"/> -->
             <a href="team.html"><input class="button4" value="OUR TEAM" type="submit"/></a>
          </header>
          <div id="banner">
          <div class="banner"></div>
             <div class="form" id='flex'>
-               <div class="form-style-5" id="form-style-5-Animation"><div class="formHat">Your helping hand in any situation <div id="formHatAnimation"> &#9759;</div></div><!-- div id="handSlideAnimation"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAFYElEQVR4Xu2cP2wcRRTGv/HZCM7CMRFJUATkIgWJAkScODIICbugocCYmiZpaQwdgsLjgoiO0FBFSlJBg4hoqKLEEghQzvgCCCSCZIMUBAKFUxxBEduDZs8XOcnt3b7Zt7tv79629+bNzPf73uzsvzPQo1AFTKG9a+dQAAWbQAEogBgFPnzPFawNrfvX3woyc1Aj2sgCoxVAoHBczRQAl5KBeRRAoHBczRQAl5KBeRRAoHBczQoE8PTuPXi5dggHx3ZhdPg+rK438fHVn/D99b/iZ6e7IB7yXvx3p17omOzkt1/h6z9/79yRAuAB8M6R5zC1b3/HZD9c/xtvf7OkAHik7pzl9PRL2FutxnYx+/knCiBLAB+9OIvRkREFgIJOwienpvHU7oc7AvAn4/kvLmgFZFkB3U7CH3xXx4VrvyqALAH43M/u24/Z2hO3K8E7/7PVX+LF9410F5Q1lh75FYAC4FWgoJNw8CS0AoKl42moAHh0DM6iAIKl42nYdwC2ZXEr9jA2cRHAOI9SbFmacHjVHLOX0mSU+0wYgFu2x+FwJs0EM29rcMIctWdD+xELwF22MzCR8+UfKSCIBOCWF1/DFs7BuIp89aMRNlHBhJmwa9TxigNwx7Lj3wwSN8JYic+ZSXu81ABcfXEecKeokxATX8FBahWI8ZerW3+yvddBZaoCgzfNUUsykAgAseKLsXbCgTgsmWN2JmF0FFYoALdix7GBizA43HXQ5amCppm0D5UCQGLxKbMREGsmLcnUpGCu+W1f3X4KoJY4Z0mqQDyAVLcWvF2Ev7QuGoCr2zkgurUg7b5O4kLsFSgWANseX3gViAPgVmwNm3gfgHd/3x9iAES7nC0zD+feYF9yBFdBoQAi0TfNK4DzFyPk+yL9UB65Amjt5c30tuD+9nH3C6p+ULjHHHIB4JYXF7Dl5lTwe2lkDsDVF04BZr5wMwu9MMsBgP2H/aRKoSlU+PYU8gBQ3LWo4N1PngCaAHZRTJsqVrjj755bDhWwcB7wW80cjhI4Pn8AebytUELhc1uCfEeZ7IQcljCEs+LfA5JwHRBBuGwtDBZSLUQt0c9jCJfMhG204NriTvKpJtNqnPk5YOcYt2+0WQD+1sOB2PF7oaPRuQaMWcMWGhhGw0xYf0K/41AADC5Ik0IBpFGPoa0CYBAxTQoFkEY9hrYKgEHENCmkAdhYv4n/rv0RTen+R/ZiZHys6/Ry3QWlETqurTQAN6+uwt261Rru0BAefPKQAkgDnuro9R9/vt1dZfQBVA88pgDSAKA6eieAau1RVLr8k0ruF2JphOBagrJ2dBtAEvcPJICsHd0GkMT9AwmAukZTHe3jk7p/4AEkcSnV0T4+Sd72kjpw29CsHf3v2m+b1drjiT8WHFgASV1KdfTGjRtfDo+NPZ9ww3HFTFrSu1GFfB/QbTLUCzHqGk11NAxOJH5IVNZvxHYCCQGQ1P2+nxBHu3r0sOiZHlVAdn900k5YWrmFUQHk4ejWO6/w/wkRB+EKKpjp9ICpl3ClB5Cno1sfkbs5wLS+hHRo+OfYffVfEdQKCFmjs3R0L8ff/XvpK8Bv+0LX6CwcPZgAMlyjqYJS4/uiAtqTluDogQZAnbyE+L6qAAmCUsegAKiKMccrAGZBqekUAFUx5ngFwCwoNZ0CoCrGHK8AmAWlplMAVMWY4xUAs6DUdAqAqhhzvAJgFpSaTiIA0nfI1LcQqAJlHS8QAOk75KDnsFmLSskvDwDlL+sD3kKgiJNHrDgAftKhT7jyEIy7D5kASvyEiwpIJID2JMr4hKuvAFAnU8Z40RVQRkGpY1YAVMWY4xUAs6DUdP8DXuONf8QK+zQAAAAASUVORK5CYII="
+               <div class="form-style-5" id="form-style-5-Animation">
+               <div class="formHat" id="formHat">Your helping hand in any situation. 
+               </div>
+               <div class="formHat" id="formHatBack">Take your time, almost done!</div>
+               <!-- div id="handSlideAnimation"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAFYElEQVR4Xu2cP2wcRRTGv/HZCM7CMRFJUATkIgWJAkScODIICbugocCYmiZpaQwdgsLjgoiO0FBFSlJBg4hoqKLEEghQzvgCCCSCZIMUBAKFUxxBEduDZs8XOcnt3b7Zt7tv79629+bNzPf73uzsvzPQo1AFTKG9a+dQAAWbQAEogBgFPnzPFawNrfvX3woyc1Aj2sgCoxVAoHBczRQAl5KBeRRAoHBczRQAl5KBeRRAoHBczQoE8PTuPXi5dggHx3ZhdPg+rK438fHVn/D99b/iZ6e7IB7yXvx3p17omOzkt1/h6z9/79yRAuAB8M6R5zC1b3/HZD9c/xtvf7OkAHik7pzl9PRL2FutxnYx+/knCiBLAB+9OIvRkREFgIJOwienpvHU7oc7AvAn4/kvLmgFZFkB3U7CH3xXx4VrvyqALAH43M/u24/Z2hO3K8E7/7PVX+LF9410F5Q1lh75FYAC4FWgoJNw8CS0AoKl42moAHh0DM6iAIKl42nYdwC2ZXEr9jA2cRHAOI9SbFmacHjVHLOX0mSU+0wYgFu2x+FwJs0EM29rcMIctWdD+xELwF22MzCR8+UfKSCIBOCWF1/DFs7BuIp89aMRNlHBhJmwa9TxigNwx7Lj3wwSN8JYic+ZSXu81ABcfXEecKeokxATX8FBahWI8ZerW3+yvddBZaoCgzfNUUsykAgAseKLsXbCgTgsmWN2JmF0FFYoALdix7GBizA43HXQ5amCppm0D5UCQGLxKbMREGsmLcnUpGCu+W1f3X4KoJY4Z0mqQDyAVLcWvF2Ev7QuGoCr2zkgurUg7b5O4kLsFSgWANseX3gViAPgVmwNm3gfgHd/3x9iAES7nC0zD+feYF9yBFdBoQAi0TfNK4DzFyPk+yL9UB65Amjt5c30tuD+9nH3C6p+ULjHHHIB4JYXF7Dl5lTwe2lkDsDVF04BZr5wMwu9MMsBgP2H/aRKoSlU+PYU8gBQ3LWo4N1PngCaAHZRTJsqVrjj755bDhWwcB7wW80cjhI4Pn8AebytUELhc1uCfEeZ7IQcljCEs+LfA5JwHRBBuGwtDBZSLUQt0c9jCJfMhG204NriTvKpJtNqnPk5YOcYt2+0WQD+1sOB2PF7oaPRuQaMWcMWGhhGw0xYf0K/41AADC5Ik0IBpFGPoa0CYBAxTQoFkEY9hrYKgEHENCmkAdhYv4n/rv0RTen+R/ZiZHys6/Ry3QWlETqurTQAN6+uwt261Rru0BAefPKQAkgDnuro9R9/vt1dZfQBVA88pgDSAKA6eieAau1RVLr8k0ruF2JphOBagrJ2dBtAEvcPJICsHd0GkMT9AwmAukZTHe3jk7p/4AEkcSnV0T4+Sd72kjpw29CsHf3v2m+b1drjiT8WHFgASV1KdfTGjRtfDo+NPZ9ww3HFTFrSu1GFfB/QbTLUCzHqGk11NAxOJH5IVNZvxHYCCQGQ1P2+nxBHu3r0sOiZHlVAdn900k5YWrmFUQHk4ejWO6/w/wkRB+EKKpjp9ICpl3ClB5Cno1sfkbs5wLS+hHRo+OfYffVfEdQKCFmjs3R0L8ff/XvpK8Bv+0LX6CwcPZgAMlyjqYJS4/uiAtqTluDogQZAnbyE+L6qAAmCUsegAKiKMccrAGZBqekUAFUx5ngFwCwoNZ0CoCrGHK8AmAWlplMAVMWY4xUAs6DUdAqAqhhzvAJgFpSaTiIA0nfI1LcQqAJlHS8QAOk75KDnsFmLSskvDwDlL+sD3kKgiJNHrDgAftKhT7jyEIy7D5kASvyEiwpIJID2JMr4hKuvAFAnU8Z40RVQRkGpY1YAVMWY4xUAs6DUdP8DXuONf8QK+zQAAAAASUVORK5CYII="
                         width="20x" height="20px"/></div> -->
                   <div id="frontSide">
                   <form action="send-sms.php" method="POST">

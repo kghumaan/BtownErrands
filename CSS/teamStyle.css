@@ -88,14 +88,22 @@ span#h{
   filter: grayscale(0);
 }
 .image2{
-  margin: auto;
+  font-size: 200%;
+  font-weight: bold;
+  margin: 0 auto;
+  line-height: 200px;
+  white-space: nowrap;
   position: relative;
   top: 45vh;
   z-index: 2;
   height: 200px;
   width: 200px;
-  background: url("........");
-  background-size: cover;
+  background: url("../Images/SAM.jpg");
+  background-color: black;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: red;
   border-radius: 50%;
   border: 15px solid #800000; 
   -webkit-filter: grayscale(100%);
@@ -104,12 +112,23 @@ span#h{
   transition: .3s ease-in-out;
 }
 .image2:hover{
-  background: url(".........");
+  font-size: 300%;
+  font-weight: bold;
+  margin: 0 auto;
+  line-height: 300px;
+  white-space: nowrap;
+  position: relative;
+  background: url("../Images/SAM.jpg");
+  background-color: black;
+  background-position: center; 
+  background-size: contain;
+  background-repeat: no-repeat;
+  color: red;
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   height: 300px;
   width: 300px;
-  background-size: cover;
+
 }
 .image3{
   margin: auto;
@@ -169,7 +188,7 @@ span#h{
   z-index: 2;
   height: 200px;
   width: 200px;
-  background: url("../Images/Arnav.png");
+  background: url("../Images/Kumaran.jpg");
   background-size: cover;
   border-radius: 50%;
   border: 15px solid #800000; 
@@ -179,7 +198,7 @@ span#h{
   transition: .3s ease-in-out;
 }
 .image5:hover{
-  background: url("../Images/Arnav.png");
+  background: url("../Images/Kumaran.jpg");
   -webkit-filter: grayscale(0);
   filter: grayscale(0);
   height: 300px;

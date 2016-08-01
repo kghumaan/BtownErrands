@@ -18,23 +18,16 @@
       <script type="text/javascript" src="facebookLogin.js"></script>
 
       <title>Btown Errands</title>
-
    </head>
    <body>
       <div id="fb-root"></div>
-         <script>(function(d, s, id) {
-           var js, fjs = d.getElementsByTagName(s)[0];
-           if (d.getElementById(id)) return;
-           js = d.createElement(s); js.id = id;
-           js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.7&appId=270853463280526";
-           fjs.parentNode.insertBefore(js, fjs);
-         }(document, 'script', 'facebook-jssdk'));</script>
+
       <div id="container">
          <header>
-               <input class="button1" value="SIGN UP" type="submit" onClick="fbLogin()" />
-               <input class="button2" value="CONTACT US" type="submit"/>
-               <input class="button3" value="OUR TEAM" type="submit"/>
-               <div class="logo"></div>
+            <a href="index.html"><input class="button1" value="HOME" type="submit" id="home"/></a>
+            <input class="button3" value="LOG IN" type="submit" id="fbLogin" onClick="fbLogin()"/>
+            <a href="team.html"><input class="button4" value="OUR TEAM" type="submit"/></a>
+            <div class="logo"></div>
          </header>
          <div id="banner" class="wrapper">
             <div id="slide">

@@ -35,10 +35,18 @@ header{
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-size: 110%;
   background-color: #8c8c8c;
-  padding: 7px;
+  padding: 6px;
   border-radius: 8px 8px 0px 0px;
   z-index: -10;
   display: block;
+}
+#formHatBack{
+  display: none;
+  -moz-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -ms-transform: scale(-1, 1);
+  transform: scale(-1, 1);
 }
 #formHatAnimation{
   animation: handSlide 1.9s 1;
@@ -102,7 +110,7 @@ form{
 }
 .form-style-5 {
   position: relative;
-  top: 60px;
+  top: 70px;
   max-width: 60%;
   max-height: 82vh;
   padding: 10px 20px;
