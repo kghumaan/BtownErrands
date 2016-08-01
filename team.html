@@ -3,12 +3,53 @@
 <head>
 <meta charset="UTF-8">
 
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-<script data-main="index" src="require.js"></script>
+<link href="https:fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+<script data-main="team" src="require.js"></script>
 <link rel="stylesheet" type="text/css" href="CSS/universal.css"/>
 <link rel="stylesheet" type="text/css" href="CSS/teamStyle.css"/>
 <title>Meet the Team</title>
 
+<script>
+   (function(){
+     var timer;
+     var KV = document.getElementById('KVtest');
+     var Max = document.getElementById('image2border');
+     var Arnav = document.getElementById('image3border');
+     var defaultTitle = document.getElementById('a');
+     var kvTitle = document.getElementById('b');
+     var maxTitle = document.getElementById('c');
+     var arnavTitle = document.getElementById('d');
+     var defaultContent = document.getElementById('e');
+     var kvContent = document.getElementById('f');
+     var maxContent = document.getElementById('g');
+     var arnavContent = document.getElementById('h');
+
+		$(function() {
+		  $('KVtest').mouseover(function() {
+		    $(this).children("b").delay(200).show(0);
+		  });
+		});
+
+     KV.onmouseover = function(){
+       setTimeout(function(){
+         kvTitle.style.display = 'block';
+         defaultTitle.style.display = 'none';
+         kvContent.style.display = 'block';
+         defaultContent.style.display = 'none';
+       }, 100);
+     }
+     KV.onmouseout = function(){
+       timer = setTimeout(function(){
+         kvTitle.style.display = 'none';
+         defaultTitle.style.display = 'block';
+         kvContent.style.display = 'none';
+         defaultContent.style.display = 'block';
+       }, 100);
+     }
+
+   })();
+
+</script>
 </head>
 <body>
 <div id="container">
@@ -32,13 +73,12 @@
 	At Btown Errands, our team devotes themselves to deliver the best service when requested upon. As full time students, we dedicate any time we have left to make sure we can serve our community and serve as a helping hand. Btown Errands is one of our many initiatives in making life easier in the butiful city of Bloomington, Indiana. Go Hoosiers!
 		</span>
 		<span id="f">
-	As our lead web programmer and software developer, KV has been incharge of solving all technical issues with Btown Errands. Originally from Indianapolis, IN, BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH BLAH.
+	As our lead web programmer and software developer, KV has been incharge of solving all technical issues with Btown Errands. Originally from Indianapolis, IN, BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH.
 		</span>
 		<span id="g">
-	As our lead web programmer and software developer, MAX has been incharge of solving all technical issues with Btown Errands. Originally from Indianapolis, IN, BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH BLAH.
-		</span>
+	As our lead web programmer and software developer, MAX has been incharge of solving all technical issues with Btown Errands. Originally from Indianapolis, IN, BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH.
 		<span id="h">
-	As our lead web programmer and software developer, ARNAV has been incharge of solving all technical issues with Btown Errands. Originally from Indianapolis, IN, BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH BLAH BLAH BLAH BLAH.
+	As our lead web programmer and software developer, ARNAV has been incharge of solving all technical issues with Btown Errands. Originally from Indianapolis, IN, BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAH BLAHBLAH BLAH BLAH.
 		</span>
 
 	</div>
@@ -53,8 +93,8 @@
 				onmouseout="document.getElementById('b').style.display = 'none';">
 					<div onmouseover="document.getElementById('a').style.display = 'none';"
 					onmouseout="document.getElementById('a').style.display = 'block';">
-						<div class="image1" id="image1border">
-						</div>
+						<div id="KVtest"><div class="image1" id="image1border">
+						</div></div>
 					</div>
 				</div>
 			</div>
@@ -85,6 +125,34 @@
 					<div onmouseover="document.getElementById('a').style.display = 'none';"
 					onmouseout="document.getElementById('a').style.display = 'block';">
 						<div class="image3" id="image3border">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				<div onmouseover="document.getElementById('h').style.display = 'block';"
+		onmouseout="document.getElementById('h').style.display = 'none';">
+			<div onmouseover="document.getElementById('e').style.display = 'none';"
+			onmouseout="document.getElementById('e').style.display = 'block';">
+				<div onmouseover="document.getElementById('d').style.display = 'block';"
+				onmouseout="document.getElementById('d').style.display = 'none';">
+					<div onmouseover="document.getElementById('a').style.display = 'none';"
+					onmouseout="document.getElementById('a').style.display = 'block';">
+						<div class="image4" id="image4border">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+				<div onmouseover="document.getElementById('h').style.display = 'block';"
+		onmouseout="document.getElementById('h').style.display = 'none';">
+			<div onmouseover="document.getElementById('e').style.display = 'none';"
+			onmouseout="document.getElementById('e').style.display = 'block';">
+				<div onmouseover="document.getElementById('d').style.display = 'block';"
+				onmouseout="document.getElementById('d').style.display = 'none';">
+					<div onmouseover="document.getElementById('a').style.display = 'none';"
+					onmouseout="document.getElementById('a').style.display = 'block';">
+						<div class="image5" id="image5border">
 						</div>
 					</div>
 				</div>

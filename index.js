@@ -12,14 +12,6 @@
   script.type = 'text/javascript';
   document.getElementsByTagName('head')[0].appendChild(script);
 
-
-    var btn = document.getElementById('home')
-    btn.addEventListener('click', function(){
-      console.log("click!")
-      document.location.href = 'index.html'
-    });
-
-
   function push() {
     databaseLink.push({
       name:document.getElementById('name').value, 

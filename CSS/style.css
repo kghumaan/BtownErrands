@@ -18,7 +18,7 @@ header{
 	height: 100%;
 	position: fixed;
 	top: 0px;
-	background: url("../Images/banner.jpg");
+	background: url(../Images/banner.jpg);
 	background-size: 100% 100%;
 	background-repeat: no-repeat;
 	padding-top: 10px;
@@ -26,7 +26,56 @@ header{
 	text-shadow: 20px black;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
+.formHat{
+  height: 30px;
+  position: absolute;
+  top: -33px;
+  left: 0px;
+  color: white;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 110%;
+  background-color: #8c8c8c;
+  padding: 7px;
+  border-radius: 8px 8px 0px 0px;
+  z-index: -10;
+  display: block;
+}
+#formHatAnimation{
+  animation: handSlide 1.9s 1;
+}
+@keyframes handSlide{
+  0%{
+    transform: translate3d(0px, -5000px, 0px);
+  }
+  100%{
+    transform: translate3d(0px, 0%, 0px);
+  }
+}
+/*#handSlideAnimation{
+  animation: handSlide 2s 1000;
+  position: relative;
+  top: -40px;
+  color: white;
+}
+
+@keyframes handSlide{
+  0%{
+    transform: translate3d(0px, 0%, 0px);
+  }
+  50%{
+    transform: translate3d(0px, 10px, 0px);
+  }
+  100%{
+    transfor: translate3d(0px, 0%, 0px);
+  }
+}*/
 /* Form CSS */
+#frontSide{
+  z-index: 1000;
+}
+form{
+  z-index: 1000;
+}
 .form{
   transform-style: preserve-3d;
     -webkit-transition-duration: 2s;
@@ -63,11 +112,11 @@ header{
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 #form-style-5-Animation{
-  animation: slide 3s 1;
+  animation: slide 2s 1;
 }
 @keyframes slide{
   0%{
-    transform: translate3d(0px, 1000%, 0px);
+    transform: translate3d(0px, 500%, 0px);
   }
   100%{
     transform: translate3d(0px, 0%, 0px);
@@ -145,7 +194,7 @@ header{
 .form-style-5 input[type="location"]:focus,
 .form-style-5 textarea:focus,
 .form-style-5 select:focus {
-  background: #b30000;
+  background: #d2d9dd;
 }
 .form-style-5 select {
   -webkit-appearance: menulist-button;
