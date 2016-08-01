@@ -27,15 +27,17 @@
 
       <script type="text/javascript">
       var ref = new Firebase('https://errandboi-f1cf5.firebaseio.com/'); 
+
       function fbLogin(){
-      ref.authWithOAuthRedirect("facebook", function(error) {
+      console.log("FB BUTTON WORKED!");
+      ref.authWithOAuthRedirect("facebook", function(error, authData) {
         if (error) {
-          console.log("Login Failed!", error);
+          console.log("Redi Failed!", error);
         } else {
-          // We'll never get here, as the page will redirect on success.
+          console.log("Authenticated successfully with payload:", authData);
         }
       });
-   };
+      };
       $(document).ready(function() {
          $("input[name='next']").on("click", function(){
           console.log( "The NEXT Button Worked!" );
@@ -67,7 +69,7 @@
          <div class="logo"></div>
          <header> 
             <a href="index.html"><input class="button1" value="HOME" type="button"/></a>  
-            <input class="button3" value="LOG IN" type="submit" id="facebook"/>
+            <input class="button3" value="LOG IN" type="submit" id="facebook" onClick="fbLogin()"/>
             <!--<input class="button3" value="CONTACT US" type="submit"/> -->
             <a href="team.html"><input class="button4" value="OUR TEAM" type="submit"/></a>
          </header>
