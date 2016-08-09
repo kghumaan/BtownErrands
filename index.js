@@ -1,5 +1,12 @@
 // Creates a variable called databaseLink that links to our database.
-  var databaseLink = new Firebase('https://errandboi-f1cf5.firebaseio.com/');  
+  var config = {
+    apiKey: "AIzaSyCdqgGdZH8bWSMiHEM7ZoeWSNfZ04uA3Y8",
+    authDomain: "errandboi-f1cf5.firebaseapp.com",
+    databaseURL: "https://errandboi-f1cf5.firebaseio.com",
+    storageBucket: "errandboi-f1cf5.appspot.com",
+  };
+  firebase.initializeApp(config);
+  var rootRef = firebase.database().ref();  
   // Create javascript variables that link our previous HTML IDs.  Remember, we can't use regular HTML inside a script tag, so we need to use JQuery to reference any previous HTML.  A $ means we are using JQuery
   var messageField = document.getElementById('task');
   var nameField = document.getElementById('name');
@@ -38,7 +45,7 @@
   //   };
 
   function push() {
-    databaseLink.push({
+    rootRef.push({
       name:document.getElementById('name').value, 
       task:document.getElementById('task').value,
       email:document.getElementById('email').value,
