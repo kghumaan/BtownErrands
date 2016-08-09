@@ -41,6 +41,21 @@ header{
   border-radius: 8px 8px 0px 0px;
   z-index: -10;
 }
+.formHat2{
+  height: 30px;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  right: 57%;
+  top: 65px;
+  color: white;
+  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
+  font-size: 110%;
+  background-color: #8c8c8c;
+  padding: 6px;
+  border-radius: 8px 8px 0px 0px;
+  z-index: -10;
+}
 #formHatBack{
   display: none;
   -moz-transform: scale(-1, 1);
@@ -102,7 +117,6 @@ form{
   -o-transition-duration: 2s;
   animation-duration: 2s;
 }
-
 #flex {
   display: flex;
   flex-direction: column;
@@ -110,7 +124,13 @@ form{
   align-items: space-between;
 }
 .formTitle {
+  color: #b30000;
+  font-weight: bold;
   border-bottom: solid #b30000;
+}
+.urgency{
+  color: #b30000;
+  font-weight: bold;
 }
 .form-style-5 {
   position: relative;
@@ -214,7 +234,7 @@ form{
 }
 .form-style-5 .number {
   background: #b30000;
-  color: #FCFBE3;
+  color: #FFF;
   height: 25px;
   width: 25px;
   display: inline-block;
@@ -310,11 +330,11 @@ transform: scale(-1, 1);
 }
 
 #backButton{
-  background: white;
-  color: #b30000;
-  box-shadow: 0 3px 0 #b30000;
+  background: #b30000;
+  color: #fff;
+  box-shadow: 0 3px 0 #800000;
   border-radius: 4px;
-  border-color: #b30000;
+  border-color: #800000;
   position: absolute;
   float: left;
   left: 15px;

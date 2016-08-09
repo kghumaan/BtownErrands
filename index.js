@@ -1,12 +1,28 @@
+
 // Creates a variable called databaseLink that links to our database.
-  var config = {
-    apiKey: "AIzaSyCdqgGdZH8bWSMiHEM7ZoeWSNfZ04uA3Y8",
-    authDomain: "errandboi-f1cf5.firebaseapp.com",
-    databaseURL: "https://errandboi-f1cf5.firebaseio.com",
-    storageBucket: "errandboi-f1cf5.appspot.com",
-  };
-  firebase.initializeApp(config);
-  var rootRef = firebase.database().ref();  
+function fbLogin(){
+      var config = {
+      apiKey: "AIzaSyCdqgGdZH8bWSMiHEM7ZoeWSNfZ04uA3Y8",
+      authDomain: "errandboi-f1cf5.firebaseapp.com",
+      databaseURL: "https://errandboi-f1cf5.firebaseio.com",
+      storageBucket: "errandboi-f1cf5.appspot.com",
+      };
+      firebase.initializeApp(config);
+
+      var rootRef = firebase.database().ref();
+      var auth = firebase.auth();
+      
+      var provider = new firebase.auth.FacebookAuthProvider();
+      auth.signInWithPopup(provider).then(function(result) {
+        console.log("Authenticated successfully with payload:", authData);
+        var uid = result.user.uid;
+      }).catch(function(error) {
+        console.log("Redirection Failed YO!", error);
+      });
+      };
+
+
+
   // Create javascript variables that link our previous HTML IDs.  Remember, we can't use regular HTML inside a script tag, so we need to use JQuery to reference any previous HTML.  A $ means we are using JQuery
   var messageField = document.getElementById('task');
   var nameField = document.getElementById('name');
