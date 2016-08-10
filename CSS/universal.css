@@ -6,12 +6,13 @@ body{
 }
 .logo{
   background: url(../Images/logo.png);
-  background-size: cover;
+  background-repeat: no-repeat;
+  background-size: contain;
   position: absolute;
   left: 0;
   top: 0;
-  height: 55px;
-  width: 162px;
+  height: 57px;
+  width: 182px;
   float: left;
   z-index: 222;
   opacity: 1;
