@@ -31,8 +31,8 @@ header{
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  left: 20%;
-  top: 65px;
+  left: 40%;
+  top: 30px;
   color: white;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
   font-size: 110%;
@@ -118,15 +118,9 @@ form{
   animation-duration: 2s;
 }
 #flex {
-  display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
   align-items: space-between;
-}
-.formTitle {
-  color: #b30000;
-  font-weight: bold;
-  border-bottom: solid #b30000;
 }
 .urgency{
   color: #b30000;
@@ -135,7 +129,7 @@ form{
 .form-style-5 {
   position: relative;
   top: 70px;
-  max-width: 60%;
+  max-width: 40%;
   max-height: 82vh;
   padding: 10px 20px;
   background: #f4f7f8;
@@ -357,4 +351,79 @@ transform: scale(-1, 1);
 #misc,
 #job {
   height: 5%;
+}
+.formTitle {
+  color: #b30000;
+  font-weight: bold;
+  font-size: 140%;
+  position: absolute;
+  right: 2vw;
+}
+#emailTitle{
+  margin-top: 6%;
+}
+.textTitle{
+  float: left;
+  color: black;
+  font-size: 120%;
+  margin-bottom: 3%;
+}
+#clickBelow{
+  padding-bottom: 20%;
+}
+.google{
+  margin: auto;
+  float: right;
+  position: absolute;
+  left: 6vw;
+  top: 49vh;
+  z-index: 2;
+  background: url("../Images/google.png");
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 5px solid #800000; 
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.facebook{
+  margin: auto;
+  position: absolute;
+  margin-left: auto;
+  margin-right: auto;
+  left: 0;
+  right: 0;
+  top: 49vh;
+  z-index: 2;
+  background: url("../Images/facebook.png");
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 5px solid #800000; 
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.linkedIn{
+  margin: auto;
+  position: absolute;
+  right: 6vw;
+  top: 49vh;
+  z-index: 2;
+  background: url("../Images/linkedIn.png");
+  background-size: cover;
+  height: 80px;
+  width: 80px;
+  border-radius: 50%;
+  border: 5px solid #800000; 
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+.facebook:hover,
+.google:hover,
+.linkedIn:hover{
+    border: 0px solid #800000; 
+    opacity: 1;
+    z-index: 9999;
 }

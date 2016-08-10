@@ -20,11 +20,11 @@
       <script data-main="index" src="require.js"></script>
       <!-- CSS -->
       <link rel="stylesheet" type="text/css" href="CSS/universal.css"/>
-      <link rel="stylesheet" type="text/css" href="CSS/style.css"/>
+      <link rel="stylesheet" type="text/css" href="CSS/signUp.css"/>
       <!-- Facebook Simple Login -->
       <script type="text/javascript" src="facebookLogin.js"></script>
 
-      <title>Btown Errands</title>
+      <title>Sign Up!</title>
 
       <script type="text/javascript">
       $(document).ready(function() {
@@ -66,49 +66,24 @@
          <div class="banner"></div>
             <div class="form" id='flex'>
                <div id="formHatAnimation">
-               <div class="formHat" id="formHatFront">Your helping hand in (almost) any situation. 
-               </div>
-               `</div>
-                  <div class="formHat2" id="formHatBack">Take your time... almost done!
-               </div>
                <div class="form-style-5" id="form-style-5-Animation">
                
 
                   <div id="frontSide">
                   <form action="send-sms.php" method="POST">
-                     
-                     <fieldset >
-                        <legend><div class="formTitle"> Fill out the form below to request help</div></legend>
-                        <input type="text" name="field1" id="name" placeholder="Your Name *">
-                        <input type="text" name="field3" id="location" placeholder="Your Location (i.e. McNutt, exact address, etc.)*">
-                        <input type="email" name="field2" id="email" placeholder="Email Address">
-                        <div id="number"><span class="number">or</span></div>
-                        <input type="text" name="field5" id="phone" placeholder="Phone Number">
-                        <textarea type="text" id="task" name="field6" rows="1" placeholder="Task that needs completion, let us know how we can help!*"></textarea>
+                     <fieldset>
+                        <legend><div class="formTitle"> Sign Up</div></legend>
+                        <div class="textTitle" id="emailTitle">Email:</div>
+                        <input type="text" name="email" id="email" placeholder="'blahblahblah@iu.com'">
+                        <div class="textTitle">Password:</div>
+                        <input type="text" name="password" id="password" placeholder="Password">
+                        <label for="job"><div class="urgency" id="clickBelow">Or Click Below:</div></label>
+                        <div class="google"></div>
+                        <div class="facebook"></div>
+                        <div class="linkedIn"></div>
                      </fieldset>
-                  <input name="next" type="button" value="Next &#x21fe;" class="next" onClick="showBack();"/> 
-               </div>
-                  <div id="backSide" style="display: none;">
-                        <input name="back" class="Button" type="button" onClick="showFront();" value="&#x21fd; &nbsp; back" id="backButton"/><fieldset>
-                        <legend><div class="formTitle"> Please fill all required fields!</div></legend>
-                        <input type="text" name="field1" id="name" placeholder="Your Name *">
-                        <input type="text" name="field3" id="location" placeholder="Your Location (i.e. McNutt, exact address, etc.)*">
-                        <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important">
-                        <input type="email" name="field2" id="email" placeholder="Email Address">
-                        <label for="job"><div class="urgency">Urgency:</div></label>
-                        <select id="job" name="field5">
-                           <optgroup label="Urgency level: just for us to prioritize properly">
-                              <option value="Not Urgent">Low (ETA: Up to an hour)</option>
-                              <option value="reading">Normal (ETA: Up to 45 mins)</option>
-                              <option value="boxing">Critical (ETA: ASAP!)</option>
-                           </optgroup>
-                        </select>
-                        <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important">
-                     </fieldset>
-                      <input name="submit" type="submit" value="Submit!" onClick="push();return validateForm();"/>
-                     </fieldset>
-                  </div>
-                  </form>
+                  
+                  </form></div>
                </div>   
             </div>
          </div>
