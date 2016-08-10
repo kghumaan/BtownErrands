@@ -64,20 +64,7 @@ header{
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
-#formHatAnimation{
-  animation: handSlide 3s 1;
-}
-@keyframes handSlide{
-  0%{
-    transform: translate3d(0px, -5000%, 0px);
-  }
-  75%{
-    transform: translate3d(0px, -4900%, 0px);
-  }
-  100%{
-    transform: translate3d(0px, 0%, 0px);
-  }
-}
+
 /*#handSlideAnimation{
   animation: handSlide 2s 1000;
   position: relative;
@@ -110,13 +97,6 @@ form{
   -o-transition-duration: 2s;
   animation-duration: 2s;
 }
-.formFlipAgain{
-  transform-style: preserve-3d;
-  -webkit-transition-duration: 2s;
-  -moz-transition-duration: 2s;
-  -o-transition-duration: 2s;
-  animation-duration: 2s;
-}
 #flex {
   flex-direction: column;
   flex-wrap: nowrap;
@@ -138,11 +118,11 @@ form{
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
 #form-style-5-Animation{
-  animation: slide 2s 1;
+  animation: slide 1s 1;
 }
 @keyframes slide{
   0%{
-    transform: translate3d(0px, 500%, 0px);
+    transform: translate3d(0px, -500%, 0px);
   }
   100%{
     transform: translate3d(0px, 0%, 0px);
@@ -321,8 +301,8 @@ form{
   width: 80px;
   border-radius: 50%;
   border: 5px solid #800000; 
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
 }
 .facebook{
   margin: auto;
@@ -339,8 +319,8 @@ form{
   width: 80px;
   border-radius: 50%;
   border: 5px solid #800000; 
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
 }
 .linkedIn{
   margin: auto;
@@ -354,13 +334,17 @@ form{
   width: 80px;
   border-radius: 50%;
   border: 5px solid #800000; 
-  -webkit-transition: .3s ease-in-out;
-  transition: .3s ease-in-out;
+  -webkit-transition: .1s ease-in-out;
+  transition: .1s ease-in-out;
 }
 .facebook:hover,
 .google:hover,
 .linkedIn:hover{
+    height: 92px;
+    width: 92px;
     border: 0px solid #800000; 
     opacity: 1;
     z-index: 9999;
+    -webkit-filter: grayscale(0%);
+    filter: grayscale(0%);
 }
