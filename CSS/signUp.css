@@ -26,63 +26,7 @@ header{
 	text-shadow: 20px black;
 	font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
 }
-.formHat{
-  height: 30px;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  left: 40%;
-  top: 30px;
-  color: white;
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 110%;
-  background-color: #8c8c8c;
-  padding: 6px;
-  border-radius: 8px 8px 0px 0px;
-  z-index: -10;
-}
-.formHat2{
-  height: 30px;
-  position: absolute;
-  margin-left: auto;
-  margin-right: auto;
-  right: 57%;
-  top: 65px;
-  color: white;
-  font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
-  font-size: 110%;
-  background-color: #8c8c8c;
-  padding: 6px;
-  border-radius: 8px 8px 0px 0px;
-  z-index: -10;
-}
-#formHatBack{
-  display: none;
-  -moz-transform: scale(-1, 1);
-  -webkit-transform: scale(-1, 1);
-  -o-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1);
-}
 
-/*#handSlideAnimation{
-  animation: handSlide 2s 1000;
-  position: relative;
-  top: -40px;
-  color: white;
-}
-
-@keyframes handSlide{
-  0%{
-    transform: translate3d(0px, 0%, 0px);
-  }
-  50%{
-    transform: translate3d(0px, 10px, 0px);
-  }
-  100%{
-    transfor: translate3d(0px, 0%, 0px);
-  }
-}*/
 /* Form CSS */
 #frontSide{
   z-index: 1000;
@@ -108,7 +52,7 @@ form{
 }
 .form-style-5 {
   position: relative;
-  top: 70px;
+  top: 80px;
   max-width: 40%;
   max-height: 82vh;
   padding: 10px 20px;
@@ -283,17 +227,19 @@ form{
   float: left;
   color: black;
   font-size: 100%;
+  margin-left: 1%;
   margin-bottom: 1%;
 }
 #clickBelow{
-  padding-bottom: 30%;
+  padding-top: 2%;
+  padding-bottom: 20%;
 }
 .google{
   margin: auto;
   float: right;
   position: absolute;
   left: 6vw;
-  top: 44vh;
+  top: 52vh;
   z-index: 2;
   background: url("../Images/google.png");
   background-size: cover;
@@ -311,7 +257,7 @@ form{
   margin-right: auto;
   left: 0;
   right: 0;
-  top: 44vh;
+  top: 52vh;
   z-index: 2;
   background: url("../Images/facebook.png");
   background-size: cover;
@@ -326,7 +272,7 @@ form{
   margin: auto;
   position: absolute;
   right: 6vw;
-  top: 44vh;
+  top: 52vh;
   z-index: 2;
   background: url("../Images/linkedIn.png");
   background-size: cover;
@@ -347,4 +293,35 @@ form{
     z-index: 9999;
     -webkit-filter: grayscale(0%);
     filter: grayscale(0%);
+}
+.button1,
+.button2,
+.button3,
+.button4{
+    border-radius: 8px;
+    width: 120px;
+    margin-top: -8px;
+    margin-right: 5px;
+    margin-left: 5px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    float: right;
+    border-style: solid;
+    border-color: red;
+    border-width: 1.5px;
+    color: red;
+    background-color: black;
+    font-size: 14px;
+    opacity: 1;
+}
+.button1:hover,
+.button2:hover,
+.button3:hover,
+.button4:hover{
+    background-color: red;
+    color: white;
+    opacity: 1;
+    z-index: 9999;
 }

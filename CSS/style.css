@@ -28,10 +28,11 @@ header{
 }
 .formHat{
   height: 30px;
+  width: 23vw;
   position: absolute;
   margin-left: auto;
   margin-right: auto;
-  left: 20%;
+  left: 27%;
   top: 65px;
   color: white;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
@@ -43,10 +44,10 @@ header{
 }
 .formHat2{
   height: 30px;
+  width: 23vw;
   position: absolute;
   margin-left: auto;
-  margin-right: auto;
-  right: 57%;
+  right: 50%;
   top: 65px;
   color: white;
   font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
@@ -135,6 +136,7 @@ form{
 .form-style-5 {
   position: relative;
   top: 70px;
+  width: 50%;
   max-width: 60%;
   max-height: 82vh;
   padding: 10px 20px;
@@ -344,7 +346,7 @@ transform: scale(-1, 1);
   padding-right: 2px;
   padding-top: 2px;
   padding-bottom: 2px;
-  max-width: 12vw;
+  width: 12vw;
   height: 27px;
   font-size: 105%;
   outline: 0;
@@ -359,4 +361,21 @@ transform: scale(-1, 1);
 #misc,
 #job {
   height: 5%;
+}
+.map{
+  width: 100%;
+  height: 32vh;
+  padding: 5px;
+}
+.urgency{
+  margin-bottom: 3vh;
+}
+.agreement{
+  position: relative;
+  font-style: italic;
+  font-size: 90%;
+}
+.checkbox{
+  position: relative;
+
 }

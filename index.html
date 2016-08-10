@@ -64,7 +64,7 @@
          <div class="banner"></div>
             <div class="form" id='flex'>
                <div id="formHatAnimation">
-               <div class="formHat" id="formHatFront">Your helping hand in (almost) any situation. 
+               <div class="formHat" id="formHatFront">Your helping hand in any situation. 
                </div>
                `</div>
                   <div class="formHat2" id="formHatBack">Take your time... almost done!
@@ -87,12 +87,8 @@
                   <input name="next" type="button" value="Next &#x21fe;" class="next" onClick="showBack();"/> 
                </div>
                   <div id="backSide" style="display: none;">
-                        <input name="back" class="Button" type="button" onClick="showFront();" value="&#x21fd; &nbsp; back" id="backButton"/><fieldset>
-                        <legend><div class="formTitle"> Please fill all required fields!</div></legend>
-                        <input type="text" name="field1" id="name" placeholder="Your Name *">
-                        <input type="text" name="field3" id="location" placeholder="Your Location (i.e. McNutt, exact address, etc.)*">
-                        <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important">
-                        <input type="email" name="field2" id="email" placeholder="Email Address">
+                        <input name="back" class="Button" type="button" onClick="showFront();" value="&#x21fd; &nbsp; back" id="backButton"/>
+                        <fieldset>
                         <label for="job"><div class="urgency">Urgency:</div></label>
                         <select id="job" name="field5">
                            <optgroup label="Urgency level: just for us to prioritize properly">
@@ -102,6 +98,8 @@
                            </optgroup>
                         </select>
                         <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important">
+<!--                         <div class="urgency">Terms and Agreements:</div> -->
+                        <div class="agreement"><input type="checkbox" name="checkbox" value="Agree" class="checkbox">&nbsp;I accept the <a href="termsofservice.pdf">Terms and Conditions</a>.</div>
                      </fieldset>
                       <input name="submit" type="submit" value="Submit!" onClick="push();return validateForm();"/>
                      </fieldset>
