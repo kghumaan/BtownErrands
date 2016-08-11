@@ -21,33 +21,21 @@
       <!-- CSS -->
       <link rel="stylesheet" type="text/css" href="CSS/universal.css"/>
       <link rel="stylesheet" type="text/css" href="CSS/signUp.css"/>
-      <!-- Facebook Simple Login -->
-      <script type="text/javascript" src="facebookLogin.js"></script>
+
       <title>Sign Up!</title>
       <script type="text/javascript">
-      $(document).ready(function() {
-         $("input[name='next']").on("click", function(){
-          console.log( "The NEXT Button Worked!" );
-         $(".form").css("transform", "rotateY(180deg)");
-      })
-         $("input[name='back']").on("click", function() {
-          console.log("The BACK Button Worked!");
-         $(".form").css("transform", "rotateY(0deg)");
-        })
+      function signUp(){
+      var ref = new Firebase("https://https://errandboi-f1cf5.firebaseio.com");
+      ref.createUser({
+        email    : document.getElementById('email'),
+        password : document.getElementById('password')
+      }, function(error, userData) {
+        if (error) {
+          console.log("Error creating user:", error);
+        } else {
+          console.log("Successfully created user account with uid:", userData.uid);
+        }
       });
-      function showBack(){
-         // console.log( "timeout worked" );
-         setTimeout(function(){document.getElementById("backSide").style.display="block";}, 580);
-         setTimeout(function(){document.getElementById("frontSide").style.display="none";}, 580);
-         setTimeout(function(){document.getElementById("formHatBack").style.display="block";}, 580);
-         setTimeout(function(){document.getElementById("formHatFront").style.display="none";}, 580);
-      };
-      function showFront(){
-         // console.log( "timeout worked" );
-         setTimeout(function(){document.getElementById("frontSide").style.display="block";}, 580);
-         setTimeout(function(){document.getElementById("backSide").style.display="none";}, 580);
-         setTimeout(function(){document.getElementById("formHatBack").style.display="none";}, 580);
-         setTimeout(function(){document.getElementById("formHatFront").style.display="block";}, 580);
       };
     </script>
    </head>
@@ -65,14 +53,14 @@
             <div class="form" id='flex'>
                <div class="form-style-5" id="form-style-5-Animation">
                   <div id="frontSide">
-                  <form action="send-sms.php" method="POST">
+                  <form action="thanks.html" method="POST">
                      <fieldset>
                         <legend><div class="formTitle"> Sign Up</div></legend>
                         <div class="textTitle" id="emailTitle">Email:</div>
                         <input type="text" name="email" id="email" placeholder="blahblahblah@iu.com">
                         <div class="textTitle">Password:</div>
                         <input type="text" name="password" id="password" placeholder="password_123">
-                        <input name="submit" type="submit" value="Submit!" onClick="push();return validateForm();"/>
+                        <input name="submit" type="submit" value="Submit!" onClick="signUp();return validateSignUp();"/>
                         <label for="job"><div class="urgency" id="clickBelow">Or Click Below:</div></label>
                         <div class="google"></div>
                         <div class="facebook" onClick="fbLogin()"></div>

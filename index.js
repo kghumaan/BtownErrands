@@ -1,6 +1,6 @@
 
 // Creates a variable called databaseLink that links to our database.
-function fbLogin(){
+
       var config = {
       apiKey: "AIzaSyCdqgGdZH8bWSMiHEM7ZoeWSNfZ04uA3Y8",
       authDomain: "errandboi-f1cf5.firebaseapp.com",
@@ -8,11 +8,11 @@ function fbLogin(){
       storageBucket: "errandboi-f1cf5.appspot.com",
       };
       firebase.initializeApp(config);
-
       var rootRef = firebase.database().ref();
       var auth = firebase.auth();
-      
       var provider = new firebase.auth.FacebookAuthProvider();
+
+      function fbLogin(){
       auth.signInWithPopup(provider).then(function(result) {
         console.log("Authenticated successfully with payload:", authData);
         var uid = result.user.uid;
@@ -37,29 +37,6 @@ function fbLogin(){
   // var provider = new databaseLink.auth.FacebookAuthProvider();
   // provider.addScope('user_birthday');  //OPTIONAL
 
-
-
-  // function fbLogin(){
-  // databaseLink.auth().signInWithRedirect(provider);firebase.auth().getRedirectResult().then(function(result) {
-  // if (result.credential) {
-  //   // This gives you a Facebook Access Token. You can use it to access the Facebook API.
-  //   var token = result.credential.accessToken;
-  //   // ...
-  //   }
-  //   // The signed-in user info.
-  //   var user = result.user;
-  //   }).catch(function(error) {
-  //   // Handle Errors here.
-  //   var errorCode = error.code;
-  //   var errorMessage = error.message;
-  //   // The email of the user's account used.
-  //   var email = error.email;
-  //   // The firebase.auth.AuthCredential type that was used.
-  //   var credential = error.credential;
-  //   // ...
-  //   });
-  //   };
-
   function push() {
     rootRef.push({
       name:document.getElementById('name').value, 
@@ -68,6 +45,7 @@ function fbLogin(){
       phone:document.getElementById('phone').value,
       location:document.getElementById('location').value,
       misc:document.getElementById('misc').value,
+      Urgency:document.getElementById('job').value,
     }) 
   };
     // require(['twilio'], function(twilio){
