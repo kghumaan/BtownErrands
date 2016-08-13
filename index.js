@@ -14,7 +14,7 @@
 
       function fbLogin(){
       auth.signInWithPopup(provider).then(function(result) {
-        console.log("Authenticated successfully with payload:", authData);
+        console.log("Authenticated successfully with payload:");
         var uid = result.user.uid;
       }).catch(function(error) {
         console.log("Redirection Failed YO!", error);

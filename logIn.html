@@ -9,7 +9,7 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <!--THIS IS NEEDED TO IMPORT FIREBASE LIBRARIES -->
       <!-- THIS IS JUST A NICE LOOKING FONT -->
-      // <!-- <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script> -->
+      <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
       <!-- AngularFire -->
 <!--      <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script> -->
       <!-- THIS IS JUST A NICE LOOKING FONT -->
@@ -20,9 +20,8 @@
       <script data-main="index" src="require.js"></script>
       <!-- CSS -->
       <link rel="stylesheet" type="text/css" href="CSS/universal.css"/>
-      <link rel="stylesheet" type="text/css" href="CSS/signUp.css"/>
-      <!-- Facebook Simple Login -->
-      <script type="text/javascript" src="facebookLogin.js"></script>
+      <link rel="stylesheet" type="text/css" href="CSS/logIn.css"/>
+
       <title>Log In!</title>
       <script type="text/javascript">
       $(document).ready(function() {
@@ -69,7 +68,7 @@
                      <fieldset>
                         <legend><div class="formTitle"> Log In</div></legend>
                         <div class="textTitle" id="emailTitle">Email:</div>
-                        <input type="text" name="email" id="email" placeholder="blahblahblah@iu.com">
+                        <input type="text" name="email" id="email" placeholder="blahblahblah@email.com">
                         <div class="textTitle">Password:</div>
                         <input type="text" name="password" id="password" placeholder="password_123">
                         <input name="submit" type="submit" value="Submit!" onClick="push();return validateForm();"/>
