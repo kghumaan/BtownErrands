@@ -3,24 +3,30 @@
    <head>
       <meta charset="UTF-8">
       <!-- TO IMPORT REACT, JSX, and JQUERY-->
-
+      <link rel="icon" href="../Images/favicon.ico" type="image/x-icon" />
       <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/react.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/react/0.13.3/JSXTransformer.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
       <!--THIS IS NEEDED TO IMPORT FIREBASE LIBRARIES -->
       <!-- THIS IS JUST A NICE LOOKING FONT -->
       <script src="https://www.gstatic.com/firebasejs/3.2.1/firebase.js"></script>
+
+      <!--FireBaseUI -->
+      <script src="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.js"></script>
+      <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/live/0.4/firebase-ui-auth.css" />
       <!-- AngularFire -->
-<!--      <script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script> -->
+      <!--<script src="https://cdn.firebase.com/libs/angularfire/1.1.2/angularfire.min.js"></script> -->
       <!-- THIS IS JUST A NICE LOOKING FONT -->
       <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
       <!--THIS IS NEEDED TO IMPORT JQUERY LIBRARIES -->  
       <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js'></script>
       <!-- THIS IS TO IMPORT MY JS FILE -->
       <script data-main="index" src="require.js"></script>
+      <script src="config.js"></script>
       <!-- CSS -->
       <link rel="stylesheet" type="text/css" href="CSS/universal.css"/>
       <link rel="stylesheet" type="text/css" href="CSS/logIn.css"/>
+
 
       <title>Log In!</title>
       <script type="text/javascript">
@@ -68,9 +74,9 @@
                      <fieldset>
                         <legend><div class="formTitle"> Log In</div></legend>
                         <div class="textTitle" id="emailTitle">Email:</div>
-                        <input type="text" name="email" id="email" placeholder="blahblahblah@email.com">
+                        <input type="text" name="email" id="email" placeholder="Email">
                         <div class="textTitle">Password:</div>
-                        <input type="text" name="password" id="password" placeholder="password_123">
+                        <input type="text" name="password" id="password" placeholder="password">
                         <input name="submit" type="submit" value="Submit!" onClick="push();return validateForm();"/>
                         <label for="job"><div class="urgency" id="clickBelow">Or Click Below:</div></label>
                         <div class="google"></div>

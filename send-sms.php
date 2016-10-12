@@ -16,7 +16,7 @@ $client = new Services_Twilio($account_sid, $auth_token);
 $client->account->messages->create(array( 
 	'To' => "3177302557", 
 	'From' => "+13173644864", 
-	'Body' => "YOU GOT A NEW ERRAND, BET!: \nName: $name \nTask: $task \nEmail: $email \nPhone #: $phone \nLocation: $location \nMisc: $misc",   
+	'Body' => "YOU GOT A NEW ERRAND!!! \nName: $name \nTask: $task \nEmail: $email \nPhone #: $phone \nLocation: $location \nMisc: $misc",   
 )); 
 
 ?>

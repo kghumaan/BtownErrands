@@ -1,17 +1,6 @@
 
 // Creates a variable called databaseLink that links to our database.
 
-      var config = {
-      apiKey: "AIzaSyCdqgGdZH8bWSMiHEM7ZoeWSNfZ04uA3Y8",
-      authDomain: "errandboi-f1cf5.firebaseapp.com",
-      databaseURL: "https://errandboi-f1cf5.firebaseio.com",
-      storageBucket: "errandboi-f1cf5.appspot.com",
-      };
-      firebase.initializeApp(config);
-      var rootRef = firebase.database().ref();
-      var auth = firebase.auth();
-      var provider = new firebase.auth.FacebookAuthProvider();
-
       function fbLogin(){
       auth.signInWithPopup(provider).then(function(result) {
         console.log("Authenticated successfully with payload:");
@@ -20,6 +9,11 @@
         console.log("Redirection Failed YO!", error);
       });
       };
+      
+      var signInWithRedirect = function() {
+        window.location.assign('/widget');
+      };
+
 
 
 
