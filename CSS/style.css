@@ -374,6 +374,8 @@ transform: scale(-1, 1);
   position: relative;
   font-style: italic;
   font-size: 90%;
+  padding-bottom: 4vh;
+  padding-top: 1vh;
 }
 .checkbox{
   position: relative;

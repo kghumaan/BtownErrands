@@ -83,7 +83,6 @@
                         <input type="email" name="field2" id="email" placeholder="Email Address">
                         <div id="number"><span class="number">or</span></div>
                         <input type="text" name="field5" id="phone" placeholder="Phone Number">
-                        <textarea type="text" id="task" name="field6" rows="1" placeholder="Task that needs completion, let us know how we can help!*"></textarea>
                      </fieldset>
                   <input name="next" type="button" value="Next &#x21fe;" class="next" onClick="showBack();"/> 
                </div>
@@ -100,7 +99,11 @@
                         </select>
                         <input type="text" name="field4" id="misc" placeholder="Miscellaneous Information That May Be Important">
 <!--                         <div class="urgency">Terms and Agreements:</div> -->
-                        <div class="agreement"><input type="checkbox" name="checkbox" value="Agree" class="checkbox">&nbsp;I accept the <a href="termsofservice.pdf">Terms and Conditions</a>.</div>
+                        
+                        <textarea type="text" id="task" name="field6" rows="1" placeholder="Task that needs completion, let us know how we can help!*"></textarea>
+                              <div class="agreement">
+                                    <input type="checkbox" name="checkbox" value="Agree" class="checkbox">&nbsp;I accept the <a href="termsofservice.pdf">Terms and Conditions</a>.
+                              </div>
                      </fieldset>
                       <input name="submit" type="submit" value="Submit!" onClick="push();return validateForm();"/>
                      </fieldset>
